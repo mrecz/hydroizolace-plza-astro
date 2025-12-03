@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* Additional styles */
+@import "./additional-styles/utility-patterns.css" layer(components);
+@import "./additional-styles/theme.css";
+
+@theme {
+  /* Fonts */
+  --font-inter-variable: "Inter Variable", sans-serif;
+  --font-work-sans-variable: "Work Sans Variable", sans-serif;
+
+  /* Dark Teal Palette */
+  --color-dark-teal-50: #e6f4f6;
+  --color-dark-teal-100: #b3e0e6;
+  --color-dark-teal-200: #80ccd6;
+  --color-dark-teal-300: #4db8c6;
+  --color-dark-teal-400: #33a5b3;
+  --color-dark-teal-500: #1a7a8a;
+  --color-dark-teal-600: #15626f;
+  --color-dark-teal-700: #104a54;
+  --color-dark-teal-800: #0a3239;
+  --color-dark-teal-900: #051a1e;
+  --color-dark-teal-950: #020d0f;
+
+  /* Light Teal Palette */
+  --color-light-teal-50: #e6f9fb;
+  --color-light-teal-100: #b3f0f6;
+  --color-light-teal-200: #80e7f1;
+  --color-light-teal-300: #4ddeec;
+  --color-light-teal-400: #32b8c6;
+  --color-light-teal-500: #28a0ad;
+  --color-light-teal-600: #1e7883;
+  --color-light-teal-700: #145059;
+  --color-light-teal-800: #0a282f;
+  --color-light-teal-900: #051015;
+  --color-light-teal-950: #02080a;
+
+  /* Light Gray Palette */
+  --color-light-gray-50: #fafafa;
+  --color-light-gray-100: #f5f5f5;
+  --color-light-gray-200: #e8e8e8;
+  --color-light-gray-300: #d4d4d4;
+  --color-light-gray-400: #a3a3a3;
+  --color-light-gray-500: #737373;
+  --color-light-gray-600: #525252;
+  --color-light-gray-700: #404040;
+  --color-light-gray-800: #262626;
+  --color-light-gray-900: #171717;
+  --color-light-gray-950: #0a0a0a;
+
+  /* Brick Red Palette */
+  --color-brick-red-50: #fff4f0;
+  --color-brick-red-100: #ffe0d6;
+  --color-brick-red-200: #ffc2ad;
+  --color-brick-red-300: #ff9d7a;
+  --color-brick-red-400: #ff7847;
+  --color-brick-red-500: #ff6b35;
+  --color-brick-red-600: #e64d1f;
+  --color-brick-red-700: #cc3a0f;
+  --color-brick-red-800: #a82d0c;
+  --color-brick-red-900: #852008;
+  --color-brick-red-950: #521104;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5715;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-base--letter-spacing: -0.01em;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-lg--letter-spacing: -0.01em;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-xl--letter-spacing: -0.01em;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.415;
+  --text-2xl--letter-spacing: -0.01em;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 1.3125;
+  --text-3xl--letter-spacing: -0.01em;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.25;
+  --text-4xl--letter-spacing: -0.01em;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.2;
+  --text-5xl--letter-spacing: -0.01em;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1.1562;
+  --text-6xl--letter-spacing: -0.01em;
+
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.01em;
+  --tracking-wider: 0.08em;
+  --tracking-widest: 0.4em;
+}

@@ -1,0 +1,221 @@
+---
+import MainLayout from "@/layouts/main.astro";
+import Gallery from "@/components/Gallery.tsx";
+import type { GalleryImage } from "@/components/Gallery";
+
+// Placeholder images - replace with actual project images
+const galleryImages: GalleryImage[] = [
+  {
+    src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop",
+    alt: "Hydroizolace ploché střechy - projekt 1",
+    title: "Hydroizolace ploché střechy - projekt 1",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop",
+    alt: "Renovace balkónu - projekt 2",
+    title: "Renovace balkónu - projekt 2",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+    alt: "Hydroizolace terasy - projekt 3",
+    title: "Hydroizolace terasy - projekt 3",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+    alt: "Komplexní renovace - projekt 4",
+    title: "Komplexní renovace - projekt 4",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+    alt: "Hydroizolace ploché střechy - projekt 5",
+    title: "Hydroizolace ploché střechy - projekt 5",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop",
+    alt: "Renovace balkónu - projekt 6",
+    title: "Renovace balkónu - projekt 6",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    alt: "Hydroizolace terasy - projekt 7",
+    title: "Hydroizolace terasy - projekt 7",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+    alt: "Komplexní renovace - projekt 8",
+    title: "Komplexní renovace - projekt 8",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop",
+    alt: "Hydroizolace ploché střechy - projekt 9",
+    title: "Hydroizolace ploché střechy - projekt 9",
+  },
+];
+---
+
+<MainLayout
+  title="Reference - Hydroizolace Plza"
+  description="Podívejte se na naše realizované projekty a reference od spokojených zákazníků. Hydroizolace plochých střech, renovace balkónů a teras."
+>
+  <!-- Page Header -->
+  <section class="bg-light-gray-50 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h1 class="h1 text-light-gray-900 mb-6">Reference</h1>
+      <p class="text-xl text-light-gray-600 max-w-2xl mx-auto">
+        Podívejte se na naše realizované projekty a přečtěte si, co o nás říkají
+        naši spokojení zákazníci.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="h2 text-light-gray-900 mb-4">Co o nás říkají zákazníci</h2>
+        <p class="text-lg text-light-gray-600 max-w-2xl mx-auto">
+          Spokojenost našich zákazníků je naší prioritou
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div
+          class="bg-light-gray-50 p-8 rounded-lg border border-light-gray-200"
+          data-aos="fade-up"
+          data-aos-delay="0"
+        >
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400">
+              {[...Array(5)].map((_, i) => (
+                <svg
+                  key={i}
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+              ))}
+            </div>
+          </div>
+          <p class="text-light-gray-700 mb-6 italic">
+            "Výborná práce! Hydroizolace naší ploché střechy byla provedena
+            profesionálně a rychle. Po dvou letech stále žádné problémy s
+            vlhkostí. Doporučuji!"
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-light-gray-300 rounded-full flex items-center justify-center mr-4">
+              <span class="text-light-gray-700 font-semibold">JP</span>
+            </div>
+            <div>
+              <p class="font-semibold text-light-gray-900">Jan Procházka</p>
+              <p class="text-sm text-light-gray-600">Praha</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="bg-light-gray-50 p-8 rounded-lg border border-light-gray-200"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400">
+              {[...Array(5)].map((_, i) => (
+                <svg
+                  key={i}
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+              ))}
+            </div>
+          </div>
+          <p class="text-light-gray-700 mb-6 italic">
+            "Renovace našeho balkónu dopadla skvěle. Tým pracoval čistě a
+            efektivně. Výsledek předčil naše očekávání. Určitě znovu
+            využijeme!"
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-light-gray-300 rounded-full flex items-center justify-center mr-4">
+              <span class="text-light-gray-700 font-semibold">MN</span>
+            </div>
+            <div>
+              <p class="font-semibold text-light-gray-900">Marie Nováková</p>
+              <p class="text-sm text-light-gray-600">Brno</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="bg-light-gray-50 p-8 rounded-lg border border-light-gray-200"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400">
+              {[...Array(5)].map((_, i) => (
+                <svg
+                  key={i}
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+              ))}
+            </div>
+          </div>
+          <p class="text-light-gray-700 mb-6 italic">
+            "Profesionální přístup od začátku do konce. Poradili nám s výběrem
+            technologie a provedli práci na výbornou. Terasa vypadá jako nová!"
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-light-gray-300 rounded-full flex items-center justify-center mr-4">
+              <span class="text-light-gray-700 font-semibold">PS</span>
+            </div>
+            <div>
+              <p class="font-semibold text-light-gray-900">Petr Svoboda</p>
+              <p class="text-sm text-light-gray-600">Ostrava</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-20 bg-light-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="h2 text-light-gray-900 mb-4">Galerie realizací</h2>
+        <p class="text-lg text-light-gray-600 max-w-2xl mx-auto">
+          Prohlédněte si fotografie z našich dokončených projektů
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Gallery client:load images={galleryImages} />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-light-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="h2 text-white mb-6">Chcete se také stát naším zákazníkem?</h2>
+      <p class="text-xl text-light-gray-300 max-w-2xl mx-auto mb-8">
+        Kontaktujte nás a domluvme si bezplatnou konzultaci vašeho projektu.
+      </p>
+      <a
+        href="/kontakt"
+        class="btn bg-white text-light-gray-900 hover:bg-light-gray-100 inline-flex"
+      >
+        Kontaktovat nás
+      </a>
+    </div>
+  </section>
+</MainLayout>
+

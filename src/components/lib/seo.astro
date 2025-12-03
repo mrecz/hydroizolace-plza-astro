@@ -1,0 +1,175 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: "website";
+  author?: string;
+}
+
+const {
+  title = "Hydroizolace Plza - Hydroizolace plochých střech a renovace balkónů a teras.",
+  description = "Profesionální hydroizolace plochých střech a renovace balkónů a teras za pomocí tekutých hydroizolací na bázi polyuretanu.",
+  image = "/logo-hydroizolace.png",
+  canonicalURL = Astro.url.href,
+  type = "website",
+  author = "David Plza",
+} = Astro.props;
+
+const siteName = "Hydroizolace Plza - David Plza";
+const siteURL = "https://hydroizolace-plza.cz";
+const fullImageURL = image.startsWith("http") ? image : `${siteURL}${image}`;
+const fullCanonicalURL = canonicalURL.startsWith("http")
+  ? canonicalURL
+  : `${siteURL}${canonicalURL}`;
+
+// Generate structured data for local business
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Hydroizolace Plza",
+  description: description,
+  url: siteURL,
+  telephone: "TODO",
+  email: "TODO",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "TODO",
+    postalCode: "TODO",
+    addressLocality: "TODO",
+    addressCountry: "CZ",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "TODO",
+    longitude: "TODO",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "16:00",
+    },
+  ],
+  serviceArea: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: "TODO",
+      longitude: "TODO",
+    },
+    geoRadius: "50000",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Hydroizolace plochých střech a renovace balkónů a teras",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Hydroizolace plochých střech",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Renovace balkónů a teras",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Ostatní",
+        },
+      },
+    ],
+  },
+  founder: {
+    "@type": "Person",
+    name: "David Plza",
+    jobTitle: "Majitel firmy",
+  },
+  foundingDate: "TODO",
+  logo: {
+    "@type": "ImageObject",
+    url: `${siteURL}/logo-hydroizolace.png`,
+  },
+  image: {
+    "@type": "ImageObject",
+    url: `${siteURL}/logo-hydroizolace.png`,
+  },
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={fullCanonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={fullCanonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullImageURL} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="cs_CZ" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={fullCanonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={fullImageURL} />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#c5bdb4" />
+<meta name="msapplication-TileColor" content="#c5bdb4" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content={siteName} />
+
+<meta
+  name="keywords"
+  content="Hydroizolace Plza, hydroizolace plochých střech, renovace balkónů a teras, hydroizolace, renovace, balkóny, terasy, hydroizolace plochých střech, renovace balkónů a teras, hydroizolace plochých střech, renovace balkónů a teras"
+/>
+
+<!-- Additional SEO Meta Tags -->
+<meta name="geo.region" content="CZ" />
+<meta name="geo.placename" content="TODO" />
+<meta name="geo.position" content="TODO;TODO" />
+<meta name="ICBM" content="TODO, TODO" />
+<meta name="DC.title" content={title} />
+<meta name="DC.description" content={description} />
+<meta name="DC.creator" content={author} />
+<meta name="DC.language" content="cs" />
+<meta name="DC.coverage" content="TODO" />
+<meta
+  name="DC.subject"
+  content="Hydroizolace Plza, hydroizolace plochých střech, renovace balkónů a teras, hydroizolace, renovace, balkóny, terasy, hydroizolace plochých střech, renovace balkónů a teras, hydroizolace plochých střech, renovace balkónů a teras"
+/>
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Manifest -->
+<link rel="manifest" href="/site.webmanifest" />

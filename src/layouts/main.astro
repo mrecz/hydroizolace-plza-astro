@@ -1,0 +1,52 @@
+---
+import Animate from "@/components/animate.tsx";
+import Navigation from "@/components/Navigation.astro";
+import Footer from "@/components/Footer.astro";
+import "@/styles/style.css";
+import Seo from "@/components/lib/seo.astro";
+
+import "@fontsource-variable/inter";
+import "@fontsource-variable/work-sans";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: "website";
+  author?: string;
+}
+
+const {
+  title = "Hydroizolace Plza - Hydroizolace plochých střech a renovace balkónů a teras.",
+  description = "Profesionální hydroizolace plochých střech a renovace balkónů a teras za pomocí tekutých hydroizolací na bázi polyuretanu.",
+  image = "/logo-hydroizolace.png",
+  canonicalURL = Astro.url.href,
+  type = "website",
+  author = "David Plza",
+} = Astro.props;
+---
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <Seo
+      title={title}
+      description={description}
+      image={image}
+      canonicalURL={canonicalURL}
+      type={type}
+      author={author}
+    />
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-white text-light-gray-900 font-inter-variable antialiased"
+  >
+    <Animate client:load />
+    <Navigation />
+    <main class="grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
