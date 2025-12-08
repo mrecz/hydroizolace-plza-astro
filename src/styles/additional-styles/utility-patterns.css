@@ -1,18 +1,22 @@
 /* Typography */
 .h1 {
   @apply text-5xl font-bold;
+  @apply font-work-sans-variable;
 }
 
 .h2 {
   @apply text-4xl font-bold;
+  @apply font-work-sans-variable;
 }
 
 .h3 {
   @apply text-3xl font-bold;
+  @apply font-work-sans-variable;
 }
 
 .h4 {
   @apply text-2xl font-bold;
+  @apply font-work-sans-variable;
 }
 
 @media (width >= theme(--breakpoint-md)) {
@@ -23,6 +27,104 @@
   .h2 {
     @apply text-5xl;
   }
+}
+
+/* Paint Roller Heading Underline Effect */
+.heading-paint-underline {
+  @apply relative inline-block;
+}
+
+.heading-paint-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 120%;
+  height: 20px;
+  background-image: var(--paint-effect-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.heading-paint-underline-brick::after {
+  filter: sepia(1) saturate(3) hue-rotate(-10deg) brightness(0.9);
+  opacity: 0.8;
+}
+
+.heading-paint-underline-teal::after {
+  filter: sepia(1) saturate(2) hue-rotate(130deg) brightness(0.8);
+  opacity: 0.6;
+}
+
+/* Section accent gradient */
+.section-gradient-accent {
+  background: linear-gradient(
+    135deg,
+    var(--color-light-gray-50) 0%,
+    var(--color-brick-red-50) 50%,
+    var(--color-light-gray-50) 100%
+  );
+}
+
+.section-gradient-teal {
+  background: linear-gradient(
+    135deg,
+    var(--color-light-gray-50) 0%,
+    var(--color-dark-teal-50) 50%,
+    var(--color-light-gray-50) 100%
+  );
+}
+
+/* Enhanced card styles */
+.card-hover-lift {
+  @apply transition-all duration-300;
+}
+
+.card-hover-lift:hover {
+  @apply shadow-lg;
+  transform: translateY(-4px);
+}
+
+/* Feature card with accent border */
+.feature-card-accent {
+  @apply relative overflow-hidden;
+}
+
+.feature-card-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-brick-red-400),
+    var(--color-brick-red-500)
+  );
+}
+
+/* Numbered step circle with gradient */
+.step-circle-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-light-gray-800) 0%,
+    var(--color-light-gray-900) 100%
+  );
+  @apply shadow-md;
+}
+
+/* Icon container with subtle gradient */
+.icon-container-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-light-gray-100) 0%,
+    var(--color-light-gray-200) 100%
+  );
 }
 
 /* Buttons */

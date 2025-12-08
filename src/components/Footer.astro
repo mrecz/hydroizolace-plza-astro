@@ -1,5 +1,7 @@
 ---
 const currentYear = new Date().getFullYear();
+import { Image } from "astro:assets";
+import logo from "@/assets/logo-hydroizolace.png";
 ---
 
 <footer class="bg-light-gray-50 border-t border-light-gray-200">
@@ -15,19 +17,13 @@ const currentYear = new Date().getFullYear();
           za pomocí tekutých hydroizolací na bázi polyuretanu.
         </p>
         <div class="flex items-center space-x-2">
-          <img
-            src="/logo-hydroizolace.png"
-            alt="Hydroizolace Plza"
-            class="h-8 w-auto"
-          />
+          <Image src={logo} alt="Hydroizolace Plza" width={209} height={150} />
         </div>
       </div>
 
       <!-- Navigation Links -->
       <div data-aos="fade-up" data-aos-delay="100">
-        <h3 class="text-lg font-semibold text-light-gray-900 mb-4">
-          Navigace
-        </h3>
+        <h3 class="text-lg font-semibold text-light-gray-900 mb-4">Navigace</h3>
         <ul class="space-y-2">
           <li>
             <a
@@ -66,9 +62,7 @@ const currentYear = new Date().getFullYear();
 
       <!-- Contact Info -->
       <div data-aos="fade-up" data-aos-delay="200">
-        <h3 class="text-lg font-semibold text-light-gray-900 mb-4">
-          Kontakt
-        </h3>
+        <h3 class="text-lg font-semibold text-light-gray-900 mb-4">Kontakt</h3>
         <div class="space-y-3 text-sm text-light-gray-600">
           <p>
             <span class="font-medium text-light-gray-700">Adresa:</span><br />
@@ -76,18 +70,25 @@ const currentYear = new Date().getFullYear();
           </p>
           <p>
             <span class="font-medium text-light-gray-700">Telefon:</span><br />
-            <a href="tel:+420776568259" class="hover:text-light-gray-900 transition-colors">
+            <a
+              href="tel:+420776568259"
+              class="hover:text-light-gray-900 transition-colors"
+            >
               +420 776 568 259
             </a>
           </p>
           <p>
             <span class="font-medium text-light-gray-700">E-mail:</span><br />
-            <a href="mailto:DavidPlza@seznam.cz" class="hover:text-light-gray-900 transition-colors">
+            <a
+              href="mailto:DavidPlza@seznam.cz"
+              class="hover:text-light-gray-900 transition-colors"
+            >
               DavidPlza@seznam.cz
             </a>
           </p>
           <p>
-            <span class="font-medium text-light-gray-700">Oblast působení:</span><br />
+            <span class="font-medium text-light-gray-700">Oblast působení:</span
+            ><br />
             Pardubický kraj, Královehradecký kraj, Praha, Středočeský kraj, Vysočina
           </p>
         </div>
@@ -102,4 +103,3 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
-

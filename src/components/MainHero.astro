@@ -1,0 +1,406 @@
+<!-- Hero Section -->
+<section
+  class="relative overflow-hidden bg-gradient-to-br from-dark-teal-800 via-dark-teal-700 to-dark-teal-900 py-24 md:py-36"
+>
+  <!-- Background SVG Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path
+            d="M 60 0 L 0 0 0 60"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="0.5"
+            class="text-light-teal-300"></path>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"></rect>
+    </svg>
+  </div>
+
+  <!-- Animated Water Droplets - Blocked Effect -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <!-- Droplet 1 -->
+    <svg
+      class="absolute top-[10%] left-[15%] w-8 h-12 text-light-teal-400 opacity-40 animate-[bounce_3s_ease-in-out_infinite]"
+      viewBox="0 0 24 36"
+      fill="currentColor"
+    >
+      <path
+        d="M12 0C12 0 0 14 0 22C0 29.732 5.373 36 12 36C18.627 36 24 29.732 24 22C24 14 12 0 12 0Z"
+      ></path>
+    </svg>
+    <!-- Droplet 2 -->
+    <svg
+      class="absolute top-[5%] right-[20%] w-6 h-9 text-light-teal-300 opacity-30 animate-[bounce_4s_ease-in-out_infinite_0.5s]"
+      viewBox="0 0 24 36"
+      fill="currentColor"
+    >
+      <path
+        d="M12 0C12 0 0 14 0 22C0 29.732 5.373 36 12 36C18.627 36 24 29.732 24 22C24 14 12 0 12 0Z"
+      ></path>
+    </svg>
+    <!-- Droplet 3 -->
+    <svg
+      class="absolute top-[15%] right-[35%] w-5 h-7 text-light-teal-400 opacity-35 animate-[bounce_3.5s_ease-in-out_infinite_1s]"
+      viewBox="0 0 24 36"
+      fill="currentColor"
+    >
+      <path
+        d="M12 0C12 0 0 14 0 22C0 29.732 5.373 36 12 36C18.627 36 24 29.732 24 22C24 14 12 0 12 0Z"
+      ></path>
+    </svg>
+    <!-- Droplet 4 -->
+    <svg
+      class="absolute top-[8%] left-[40%] w-4 h-6 text-light-teal-200 opacity-25 animate-[bounce_4.5s_ease-in-out_infinite_1.5s]"
+      viewBox="0 0 24 36"
+      fill="currentColor"
+    >
+      <path
+        d="M12 0C12 0 0 14 0 22C0 29.732 5.373 36 12 36C18.627 36 24 29.732 24 22C24 14 12 0 12 0Z"
+      ></path>
+    </svg>
+    <!-- Droplet 5 -->
+    <svg
+      class="absolute top-[12%] left-[65%] w-7 h-10 text-light-teal-300 opacity-30 animate-[bounce_3.2s_ease-in-out_infinite_0.8s]"
+      viewBox="0 0 24 36"
+      fill="currentColor"
+    >
+      <path
+        d="M12 0C12 0 0 14 0 22C0 29.732 5.373 36 12 36C18.627 36 24 29.732 24 22C24 14 12 0 12 0Z"
+      ></path>
+    </svg>
+  </div>
+
+  <!-- Left Side - Building Silhouette with Roof -->
+  <div class="absolute left-0 bottom-0 w-1/3 h-2/3 opacity-20 hidden lg:block">
+    <svg
+      class="w-full h-full"
+      viewBox="0 0 300 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Building structure -->
+      <rect
+        x="40"
+        y="150"
+        width="200"
+        height="250"
+        fill="currentColor"
+        class="text-light-teal-200"></rect>
+      <!-- Flat roof with waterproofing layer -->
+      <rect
+        x="30"
+        y="140"
+        width="220"
+        height="20"
+        fill="currentColor"
+        class="text-light-teal-400"></rect>
+      <!-- Roof detail line -->
+      <line
+        x1="30"
+        y1="145"
+        x2="250"
+        y2="145"
+        stroke="currentColor"
+        class="text-light-teal-100"
+        stroke-width="3"></line>
+      <!-- Windows -->
+      <rect
+        x="60"
+        y="180"
+        width="40"
+        height="50"
+        rx="2"
+        fill="currentColor"
+        class="text-dark-teal-600"></rect>
+      <rect
+        x="120"
+        y="180"
+        width="40"
+        height="50"
+        rx="2"
+        fill="currentColor"
+        class="text-dark-teal-600"></rect>
+      <rect
+        x="180"
+        y="180"
+        width="40"
+        height="50"
+        rx="2"
+        fill="currentColor"
+        class="text-dark-teal-600"></rect>
+      <rect
+        x="60"
+        y="260"
+        width="40"
+        height="50"
+        rx="2"
+        fill="currentColor"
+        class="text-dark-teal-600"></rect>
+      <rect
+        x="120"
+        y="260"
+        width="40"
+        height="50"
+        rx="2"
+        fill="currentColor"
+        class="text-dark-teal-600"></rect>
+      <rect
+        x="180"
+        y="260"
+        width="40"
+        height="50"
+        rx="2"
+        fill="currentColor"
+        class="text-dark-teal-600"></rect>
+      <!-- Balcony -->
+      <rect
+        x="100"
+        y="340"
+        width="80"
+        height="8"
+        fill="currentColor"
+        class="text-light-teal-300"></rect>
+      <rect
+        x="100"
+        y="348"
+        width="5"
+        height="30"
+        fill="currentColor"
+        class="text-light-teal-300"></rect>
+      <rect
+        x="175"
+        y="348"
+        width="5"
+        height="30"
+        fill="currentColor"
+        class="text-light-teal-300"></rect>
+    </svg>
+  </div>
+
+  <!-- Right Side - Shield Protection Symbol -->
+  <div
+    class="absolute right-0 top-1/2 -translate-y-1/2 w-80 h-80 opacity-15 hidden lg:block"
+  >
+    <svg
+      class="w-full h-full"
+      viewBox="0 0 200 220"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Shield -->
+      <path
+        d="M100 10L180 40V100C180 150 145 190 100 210C55 190 20 150 20 100V40L100 10Z"
+        fill="currentColor"
+        class="text-light-teal-300"></path>
+      <!-- Inner shield -->
+      <path
+        d="M100 30L160 52V100C160 140 132 172 100 188C68 172 40 140 40 100V52L100 30Z"
+        fill="currentColor"
+        class="text-dark-teal-700"></path>
+      <!-- Checkmark inside shield -->
+      <path
+        d="M75 105L95 125L130 85"
+        stroke="currentColor"
+        class="text-light-teal-400"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+      <!-- Water drops bouncing off shield -->
+      <g class="animate-[pulse_2s_ease-in-out_infinite]">
+        <circle
+          cx="30"
+          cy="70"
+          r="6"
+          fill="currentColor"
+          class="text-light-teal-400 opacity-60"></circle>
+        <circle
+          cx="15"
+          cy="90"
+          r="4"
+          fill="currentColor"
+          class="text-light-teal-300 opacity-40"></circle>
+        <circle
+          cx="25"
+          cy="50"
+          r="3"
+          fill="currentColor"
+          class="text-light-teal-200 opacity-50"></circle>
+      </g>
+      <g class="animate-[pulse_2s_ease-in-out_infinite_0.5s]">
+        <circle
+          cx="175"
+          cy="65"
+          r="5"
+          fill="currentColor"
+          class="text-light-teal-400 opacity-60"></circle>
+        <circle
+          cx="185"
+          cy="85"
+          r="4"
+          fill="currentColor"
+          class="text-light-teal-300 opacity-40"></circle>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Bottom Wave Pattern -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg
+      class="w-full h-24 md:h-32"
+      viewBox="0 0 1440 120"
+      preserveAspectRatio="none"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 120L48 110C96 100 192 80 288 75C384 70 480 80 576 85C672 90 768 90 864 82.5C960 75 1056 60 1152 57.5C1248 55 1344 65 1392 70L1440 75V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z"
+        fill="var(--color-light-gray-50)"></path>
+    </svg>
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center" data-aos="fade-up">
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2 bg-light-teal-400/20 border border-light-teal-400/30 rounded-full px-4 py-2 mb-8"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        <svg
+          class="w-5 h-5 text-light-teal-300"
+          fill="currentColor"
+          viewBox="0 0 24 36"
+        >
+          <path
+            d="M12 0C12 0 0 14 0 22C0 29.732 5.373 36 12 36C18.627 36 24 29.732 24 22C24 14 12 0 12 0Z"
+          ></path>
+        </svg>
+        <span class="text-light-teal-100 text-sm font-medium"
+          >Profesionální hydroizolace od roku 2009 (příklad pokud zde chcete
+          uvést jak dlouho se specializujete)</span
+        >
+      </div>
+
+      <h1 class="h1 text-white mb-6 drop-shadow-lg">Hydroizolace Plza</h1>
+      <p
+        class="text-xl md:text-2xl text-light-teal-100 max-w-3xl mx-auto mb-10 leading-relaxed"
+      >
+        Profesionální hydroizolace plochých střech a renovace balkónů a teras za
+        pomocí tekutých hydroizolací na bázi polyuretanu.
+      </p>
+
+      <!-- Features mini-badges -->
+      <div
+        class="flex flex-wrap justify-center gap-4 mb-10"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="flex items-center gap-2 text-light-teal-200 text-sm">
+          <svg
+            class="w-5 h-5 text-light-teal-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Ploché střechy</span>
+        </div>
+        <div class="flex items-center gap-2 text-light-teal-200 text-sm">
+          <svg
+            class="w-5 h-5 text-light-teal-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Balkóny</span>
+        </div>
+        <div class="flex items-center gap-2 text-light-teal-200 text-sm">
+          <svg
+            class="w-5 h-5 text-light-teal-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>Terasy</span>
+        </div>
+        <div class="flex items-center gap-2 text-light-teal-200 text-sm">
+          <svg
+            class="w-5 h-5 text-light-teal-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span>25+ let záruka</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/kontakt"
+          class="btn bg-white text-dark-teal-800 hover:bg-light-teal-50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+          Kontaktujte nás
+        </a>
+        <a
+          href="/technologie"
+          class="btn bg-transparent text-white border-2 border-light-teal-400/50 hover:bg-light-teal-400/20 hover:border-light-teal-400 transition-all duration-300"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+            ></path>
+          </svg>
+          Více o technologii
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

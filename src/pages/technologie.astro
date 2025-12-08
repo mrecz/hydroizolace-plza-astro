@@ -1,19 +1,51 @@
 ---
 import MainLayout from "@/layouts/main.astro";
+import paintEffect from "@/assets/PaintRollerEffect.png";
+import { Image } from "astro:assets";
+
+// Get the paint effect URL for CSS custom property
+const paintEffectUrl = paintEffect.src;
 ---
 
 <MainLayout
   title="Technologie - Hydroizolace Plza"
   description="Tekuté polyuretanové hydroizolační systémy pro ploché střechy, balkóny a terasy. Moderní technologie s dlouhodobou zárukou."
 >
-  <!-- Page Header -->
-  <section class="bg-light-gray-50 py-16 md:py-24">
+  <!-- Page Header with Gradient Background -->
+  <section
+    class="relative py-20 md:py-32 overflow-hidden"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
+    <!-- Background gradient -->
     <div
-      class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      class="absolute inset-0 bg-gradient-to-br from-light-gray-900 via-light-gray-800 to-light-gray-900"
+    >
+    </div>
+    <!-- Decorative elements -->
+    <div
+      class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brick-red-500/10 to-transparent"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-dark-teal-500/10 to-transparent"
+    >
+    </div>
+
+    <div
+      class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       data-aos="fade-up"
     >
-      <h1 class="h1 text-light-gray-900 mb-6">Technologie</h1>
-      <p class="text-xl text-light-gray-600 max-w-2xl mx-auto">
+      <span
+        class="inline-block px-4 py-2 bg-brick-red-500/20 text-brick-red-300 rounded-full text-sm font-medium mb-6"
+      >
+        Moderní hydroizolační systémy
+      </span>
+      <h1
+        class="h1 text-white mb-8 heading-paint-underline heading-paint-underline-brick"
+      >
+        Technologie
+      </h1>
+      <p class="text-xl text-light-gray-300 max-w-2xl mx-auto mt-12">
         Používáme moderní tekuté polyuretanové hydroizolační systémy, které
         poskytují dlouhodobou a spolehlivou ochranu vašich nemovitostí.
       </p>
@@ -21,40 +53,51 @@ import MainLayout from "@/layouts/main.astro";
   </section>
 
   <!-- What is Liquid Polyurethane -->
-  <section class="py-20 bg-white">
+  <section
+    class="py-20 section-gradient-accent"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div data-aos="fade-up">
         <div class="flex justify-center mb-8">
-          <svg
-            class="w-24 h-24 text-light-gray-900"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="icon-container-gradient w-28 h-28 rounded-2xl flex items-center justify-center shadow-lg"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-            ></path>
-          </svg>
+            <svg
+              class="w-16 h-16 text-brick-red-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <h2 class="h2 text-light-gray-900 mb-6 text-center">
+        <h2
+          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
+        >
           Co je tekutá polyuretanová hydroizolace?
         </h2>
-        <div class="prose prose-lg max-w-none text-light-gray-700">
-          <p class="mb-4">
-            Tekutá polyuretanová hydroizolace je moderní systém ochrany staveb
-            před vodou a vlhkostí. Jedná se o dvousložkový systém, který se
-            aplikuje ve formě tekutiny a následně vytvrdí do pružné, bezspárové
-            membrány.
+        <div class="prose prose-lg max-w-none text-light-gray-700 mt-12">
+          <p class="mb-6 text-lg leading-relaxed">
+            Tekutá polyuretanová hydroizolace je <strong
+              class="text-light-gray-900">moderní systém ochrany staveb</strong
+            > před vodou a vlhkostí. Jedná se o dvousložkový systém, který se aplikuje
+            ve formě tekutiny a následně vytvrdí do pružné, bezspárové membrány.
           </p>
-          <p class="mb-4">
-            Polyuretanová membrána vytváří kompaktní, nepropustný povlak, který
-            dokonale přilne k podkladu a vytváří tak dokonalou ochranu proti
-            pronikání vody. Tato technologie je ideální pro ploché střechy,
-            balkóny, terasy a další plochy vystavené povětrnostním vlivům.
+          <p class="text-lg leading-relaxed">
+            Polyuretanová membrána vytváří <strong class="text-light-gray-900"
+              >kompaktní, nepropustný povlak</strong
+            >, který dokonale přilne k podkladu a vytváří tak dokonalou ochranu
+            proti pronikání vody. Tato technologie je ideální pro ploché
+            střechy, balkóny, terasy a další plochy vystavené povětrnostním
+            vlivům.
           </p>
         </div>
       </div>
@@ -62,171 +105,214 @@ import MainLayout from "@/layouts/main.astro";
   </section>
 
   <!-- Advantages -->
-  <section class="py-20 bg-light-gray-50">
+  <section
+    class="py-20 bg-white"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="h2 text-light-gray-900 mb-4">Výhody a benefity</h2>
-        <p class="text-lg text-light-gray-600 max-w-2xl mx-auto">
+        <h2
+          class="h2 text-light-gray-900 mb-4 heading-paint-underline heading-paint-underline-brick"
+        >
+          Výhody a benefity
+        </h2>
+        <p class="text-lg text-light-gray-600 max-w-2xl mx-auto mt-10">
           Proč je polyuretanová hydroizolace nejlepší volbou pro vaši nemovitost
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
           data-aos="fade-up"
           data-aos-delay="0"
         >
-          <div class="flex justify-center mb-4">
-            <svg
-              class="w-12 h-12 text-light-gray-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div class="flex justify-center mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-              ></path>
-            </svg>
+              <svg
+                class="w-8 h-8 text-brick-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <h3 class="h4 text-light-gray-900 mb-4">Bezspárová membrána</h3>
-          <p class="text-light-gray-600">
+          <h3 class="h4 text-light-gray-900 mb-4 text-center">
+            Bezspárová membrána
+          </h3>
+          <p class="text-light-gray-600 text-center">
             Tekutá aplikace vytváří bezspárový, monolitický povlak bez
             potenciálních míst porušení. Žádné spoje, žádné netěsnosti.
           </p>
         </div>
 
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <div class="flex justify-center mb-4">
-            <svg
-              class="w-12 h-12 text-light-gray-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div class="flex justify-center mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-              ></path>
-            </svg>
+              <svg
+                class="w-8 h-8 text-brick-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <h3 class="h4 text-light-gray-900 mb-4">Vynikající přilnavost</h3>
-          <p class="text-light-gray-600">
+          <h3 class="h4 text-light-gray-900 mb-4 text-center">
+            Vynikající přilnavost
+          </h3>
+          <p class="text-light-gray-600 text-center">
             Polyuretan dokonale přilne k různým typům podkladů - beton, dřevo,
             kov, asfalt. Vytváří pevné spojení s podkladem.
           </p>
         </div>
 
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <div class="flex justify-center mb-4">
-            <svg
-              class="w-12 h-12 text-light-gray-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div class="flex justify-center mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-              ></path>
-            </svg>
+              <svg
+                class="w-8 h-8 text-brick-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <h3 class="h4 text-light-gray-900 mb-4">Pružnost a odolnost</h3>
-          <p class="text-light-gray-600">
+          <h3 class="h4 text-light-gray-900 mb-4 text-center">
+            Pružnost a odolnost
+          </h3>
+          <p class="text-light-gray-600 text-center">
             Membrána si zachovává pružnost i při teplotních změnách a pohybech
             konstrukce. Odolná vůči UV záření a povětrnostním vlivům.
           </p>
         </div>
 
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <div class="flex justify-center mb-4">
-            <svg
-              class="w-12 h-12 text-light-gray-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div class="flex justify-center mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+              <svg
+                class="w-8 h-8 text-brick-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
           </div>
-          <h3 class="h4 text-light-gray-900 mb-4">Dlouhá životnost</h3>
-          <p class="text-light-gray-600">
+          <h3 class="h4 text-light-gray-900 mb-4 text-center">
+            Dlouhá životnost
+          </h3>
+          <p class="text-light-gray-600 text-center">
             Při správné aplikaci a údržbě může polyuretanová hydroizolace
             sloužit 25 a více let. Investice, která se vyplatí.
           </p>
         </div>
 
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <div class="flex justify-center mb-4">
-            <svg
-              class="w-12 h-12 text-light-gray-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div class="flex justify-center mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+              <svg
+                class="w-8 h-8 text-brick-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
           </div>
-          <h3 class="h4 text-light-gray-900 mb-4">Rychlá aplikace</h3>
-          <p class="text-light-gray-600">
+          <h3 class="h4 text-light-gray-900 mb-4 text-center">
+            Rychlá aplikace
+          </h3>
+          <p class="text-light-gray-600 text-center">
             Aplikace je rychlá a efektivní. Minimální narušení provozu objektu
             během realizace.
           </p>
         </div>
 
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          <div class="flex justify-center mb-4">
-            <svg
-              class="w-12 h-12 text-light-gray-900"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div class="flex justify-center mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
+              <svg
+                class="w-8 h-8 text-brick-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <h3 class="h4 text-light-gray-900 mb-4">Ekologická volba</h3>
-          <p class="text-light-gray-600">
+          <h3 class="h4 text-light-gray-900 mb-4 text-center">
+            Ekologická volba
+          </h3>
+          <p class="text-light-gray-600 text-center">
             Moderní polyuretanové systémy jsou šetrné k životnímu prostředí a
             splňují přísné ekologické normy.
           </p>
@@ -236,18 +322,34 @@ import MainLayout from "@/layouts/main.astro";
   </section>
 
   <!-- Application Process -->
-  <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section
+    class="py-20 bg-light-gray-900 relative overflow-hidden"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
+    <!-- Decorative background -->
+    <div
+      class="absolute top-0 left-0 w-full h-full opacity-5"
+      style='background-image: url(&apos;data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&apos;);'
+    >
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div data-aos="fade-up">
-        <h2 class="h2 text-light-gray-900 mb-12 text-center">
+        <h2
+          class="h2 text-white mb-16 text-center heading-paint-underline heading-paint-underline-brick"
+        >
           Proces aplikace
         </h2>
 
-        <div class="space-y-8">
-          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="space-y-6 mt-12">
+          <div
+            class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
             <div class="shrink-0">
               <div
-                class="w-16 h-16 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg relative"
+                class="w-16 h-16 step-circle-gradient text-white rounded-full flex items-center justify-center font-bold text-lg"
               >
                 <svg
                   class="w-8 h-8"
@@ -265,8 +367,12 @@ import MainLayout from "@/layouts/main.astro";
               </div>
             </div>
             <div>
-              <h3 class="h4 text-light-gray-900 mb-2">Příprava podkladu</h3>
-              <p class="text-light-gray-600">
+              <span
+                class="text-brick-red-400 text-sm font-semibold uppercase tracking-wider"
+                >Krok 1</span
+              >
+              <h3 class="h4 text-white mb-2">Příprava podkladu</h3>
+              <p class="text-light-gray-400">
                 Důkladné vyčištění a příprava podkladu. Odstranění starých
                 vrstev, oprava poškozených míst a zajištění správné vlhkosti
                 podkladu.
@@ -274,10 +380,14 @@ import MainLayout from "@/layouts/main.astro";
             </div>
           </div>
 
-          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="shrink-0">
               <div
-                class="w-16 h-16 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
+                class="w-16 h-16 step-circle-gradient text-white rounded-full flex items-center justify-center font-bold text-lg"
               >
                 <svg
                   class="w-8 h-8"
@@ -295,20 +405,26 @@ import MainLayout from "@/layouts/main.astro";
               </div>
             </div>
             <div>
-              <h3 class="h4 text-light-gray-900 mb-2">
-                Primer (podkladní nátěr)
-              </h3>
-              <p class="text-light-gray-600">
+              <span
+                class="text-brick-red-400 text-sm font-semibold uppercase tracking-wider"
+                >Krok 2</span
+              >
+              <h3 class="h4 text-white mb-2">Primer (podkladní nátěr)</h3>
+              <p class="text-light-gray-400">
                 Aplikace primeru pro zajištění optimální přilnavosti
                 polyuretanové membrány k podkladu.
               </p>
             </div>
           </div>
 
-          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="shrink-0">
               <div
-                class="w-16 h-16 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
+                class="w-16 h-16 step-circle-gradient text-white rounded-full flex items-center justify-center font-bold text-lg"
               >
                 <svg
                   class="w-8 h-8"
@@ -326,18 +442,26 @@ import MainLayout from "@/layouts/main.astro";
               </div>
             </div>
             <div>
-              <h3 class="h4 text-light-gray-900 mb-2">Aplikace polyuretanu</h3>
-              <p class="text-light-gray-600">
+              <span
+                class="text-brick-red-400 text-sm font-semibold uppercase tracking-wider"
+                >Krok 3</span
+              >
+              <h3 class="h4 text-white mb-2">Aplikace polyuretanu</h3>
+              <p class="text-light-gray-400">
                 Nanášení tekutého polyuretanu ve specifikované tloušťce pomocí
                 stříkací techniky nebo válečku. Zajištění rovnoměrné vrstvy.
               </p>
             </div>
           </div>
 
-          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="shrink-0">
               <div
-                class="w-16 h-16 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
+                class="w-16 h-16 step-circle-gradient text-white rounded-full flex items-center justify-center font-bold text-lg"
               >
                 <svg
                   class="w-8 h-8"
@@ -354,10 +478,12 @@ import MainLayout from "@/layouts/main.astro";
               </div>
             </div>
             <div>
-              <h3 class="h4 text-light-gray-900 mb-2">
-                Kontrola a finální úprava
-              </h3>
-              <p class="text-light-gray-600">
+              <span
+                class="text-brick-red-400 text-sm font-semibold uppercase tracking-wider"
+                >Krok 4</span
+              >
+              <h3 class="h4 text-white mb-2">Kontrola a finální úprava</h3>
+              <p class="text-light-gray-400">
                 Kontrola kvality aplikace, kontrola tloušťky vrstvy a finální
                 úpravy. V případě potřeby aplikace ochranné vrstvy.
               </p>
@@ -369,306 +495,202 @@ import MainLayout from "@/layouts/main.astro";
   </section>
 
   <!-- Flat Roofs Section -->
-  <section class="py-20 bg-white">
+  <section
+    class="py-20 section-gradient-teal"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div data-aos="fade-up">
         <div class="flex justify-center mb-8">
-          <svg
-            class="w-24 h-24 text-light-gray-900"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <div
+            class="icon-container-gradient w-28 h-28 rounded-2xl flex items-center justify-center shadow-lg"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-            ></path>
-          </svg>
+            <svg
+              class="w-16 h-16 text-dark-teal-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <h2 class="h2 text-light-gray-900 mb-6 text-center">Ploché střechy</h2>
-        <div class="prose prose-lg max-w-none text-light-gray-700 mb-12">
-          <p class="mb-6 text-lg">
+        <h2
+          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
+        >
+          Ploché střechy
+        </h2>
+        <div
+          class="prose prose-lg max-w-none text-light-gray-700 mb-12 mt-12 text-center"
+        >
+          <p class="text-lg leading-relaxed max-w-3xl mx-auto">
             Cílem je bez bourání kompletně obnovit funkčnost staré netěsné
             izolace ploché střechy tím, že se povrch vyčistí, lokálně opraví,
             napenetruje a poté překryje polyuretanovou tekutou membránou ve dvou
             vrstvách, případně se ztužující geotextilií a finálním ochranným
-            nátěrem. Technologie je určená pro asfaltové pásy, měkčené PVC a TPO
-            fólie a je vhodná i pro pochozí střechy.
+            nátěrem.
           </p>
         </div>
 
-        <h3 class="h3 text-light-gray-900 mb-8 text-center">
-          Postup krok za krokem
-        </h3>
-
-        <div class="space-y-8">
-          <div
-            class="bg-light-gray-50 p-6 rounded-lg border-l-4 border-light-gray-900"
-            data-aos="fade-up"
-            data-aos-delay="0"
+        <div
+          class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12"
+          data-aos="fade-up"
+        >
+          <h3
+            class="h3 text-light-gray-900 mb-10 text-center heading-paint-underline heading-paint-underline-brick"
           >
-            <div class="flex gap-4 items-start">
-              <div class="shrink-0">
-                <div
-                  class="w-12 h-12 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
-                >
-                  1
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="h4 text-light-gray-900 mb-3">
-                  Důkladné vyčištění staré izolace
-                </h4>
-                <p class="text-light-gray-700">
-                  Odstranění mechů, nečistot a koroze, ideálně nasucho (košťata,
-                  ocelové kartáče), aby se pod pásy nedostala voda.
-                </p>
-              </div>
-              <div class="shrink-0 hidden md:block">
-                <svg
-                  class="w-16 h-16 text-light-gray-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
+            Postup krok za krokem
+          </h3>
 
-          <div
-            class="bg-light-gray-50 p-6 rounded-lg border-l-4 border-light-gray-900"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="flex gap-4 items-start">
-              <div class="shrink-0">
+          <div class="space-y-6 mt-12">
+            {
+              [
+                {
+                  num: "1",
+                  title: "Důkladné vyčištění staré izolace",
+                  desc: "Odstranění mechů, nečistot a koroze, ideálně nasucho (košťata, ocelové kartáče), aby se pod pásy nedostala voda.",
+                },
+                {
+                  num: "2",
+                  title: "Oprava defektů",
+                  desc: 'Rozříznutí „puchýřů" do tvaru obálky, vyplnění hmotou weberdry PUR details a ošetření detailů (napojení na oplechování, komíny, prostupy).',
+                },
+                {
+                  num: "3",
+                  title: "Nanesení dvousložkové penetrace weberprim EP 2K",
+                  desc: "Smíchat A+B, případně ředit vodou po smíchání, nanést válečkem a nechat 6–12 hodin zrát.",
+                },
+                {
+                  num: "4",
+                  title: "Aplikace weberdry PUR seal v 2 vrstvách",
+                  desc: "Rozlévání a rozprostření zubovou stěrkou nebo válečkem, vložení geotextilie weberdry fabric pro zpevnění a kontrolu tloušťky, s technologickými přestávkami mezi vrstvami.",
+                },
+                {
+                  num: "5",
+                  title: "Finální ochranný nátěr weberdry PUR coat",
+                  desc: "Po vytvrzení PUR membrány lze povrch přetřít ochranným nátěrem weberdry PUR coat (kvůli UV ochraně, barvě a odolnosti proti chůzi či provozu).",
+                },
+              ].map((step, i) => (
                 <div
-                  class="w-12 h-12 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
+                  class="flex gap-6 items-start p-6 rounded-xl bg-gradient-to-r from-light-gray-50 to-white border-l-4 border-dark-teal-500 hover:shadow-md transition-shadow"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}
                 >
-                  2
+                  <div class="shrink-0">
+                    <div class="w-12 h-12 bg-gradient-to-br from-dark-teal-500 to-dark-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+                      {step.num}
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="h4 text-light-gray-900 mb-2">{step.title}</h4>
+                    <p class="text-light-gray-600">{step.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="h4 text-light-gray-900 mb-3">Oprava defektů</h4>
-                <p class="text-light-gray-700">
-                  Rozříznutí „puchýřů" do tvaru obálky, vyplnění hmotou weberdry
-                  PUR details a ošetření detailů (napojení na oplechování,
-                  komíny, prostupy).
-                </p>
-              </div>
-              <div class="shrink-0 hidden md:block">
-                <svg
-                  class="w-16 h-16 text-light-gray-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-              </div>
-            </div>
+              ))
+            }
           </div>
+        </div>
 
-          <div
-            class="bg-light-gray-50 p-6 rounded-lg border-l-4 border-light-gray-900"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="flex gap-4 items-start">
-              <div class="shrink-0">
-                <div
-                  class="w-12 h-12 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
-                >
-                  3
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="h4 text-light-gray-900 mb-3">
-                  Nanesení dvousložkové penetrace weberprim EP 2K
-                </h4>
-                <p class="text-light-gray-700">
-                  Smíchat A+B, případně ředit vodou po smíchání, nanést válečkem
-                  a nechat 6–12 hodin zrát.
-                </p>
-              </div>
-              <div class="shrink-0 hidden md:block">
-                <svg
-                  class="w-16 h-16 text-light-gray-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                  ></path>
-                </svg>
-              </div>
-            </div>
+        <!-- Result highlight -->
+        <div
+          class="bg-gradient-to-r from-dark-teal-600 to-dark-teal-700 rounded-2xl p-8 text-white text-center"
+          data-aos="fade-up"
+        >
+          <div class="flex justify-center mb-4">
+            <svg
+              class="w-12 h-12 text-dark-teal-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
           </div>
-
-          <div
-            class="bg-light-gray-50 p-6 rounded-lg border-l-4 border-light-gray-900"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="flex gap-4 items-start">
-              <div class="shrink-0">
-                <div
-                  class="w-12 h-12 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
-                >
-                  4
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="h4 text-light-gray-900 mb-3">
-                  Aplikace weberdry PUR seal v 2 vrstvách
-                </h4>
-                <p class="text-light-gray-700">
-                  Rozlévání a rozprostření zubovou stěrkou nebo válečkem,
-                  vložení geotextilie weberdry fabric pro zpevnění a kontrolu
-                  tloušťky, s technologickými přestávkami mezi vrstvami.
-                </p>
-              </div>
-              <div class="shrink-0 hidden md:block">
-                <svg
-                  class="w-16 h-16 text-light-gray-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bg-light-gray-50 p-6 rounded-lg border-l-4 border-light-gray-900"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="flex gap-4 items-start">
-              <div class="shrink-0">
-                <div
-                  class="w-12 h-12 bg-light-gray-900 text-white rounded-full flex items-center justify-center font-bold text-lg"
-                >
-                  5
-                </div>
-              </div>
-              <div class="flex-1">
-                <h4 class="h4 text-light-gray-900 mb-3">
-                  Finální ochranný nátěr weberdry PUR coat
-                </h4>
-                <p class="text-light-gray-700">
-                  Po vytvrzení PUR membrány lze povrch přetřít ochranným nátěrem
-                  weberdry PUR coat (kvůli UV ochraně, barvě a odolnosti proti
-                  chůzi či provozu), nanášeným strojně nebo válečkem. Výsledkem
-                  je rychlá, relativně jednoduchá a bezpečná rekonstrukce s
-                  velmi dlouhou životností a možností poskytnout dlouhou (až cca
-                  25letou) záruku při použití geotextilie.
-                </p>
-              </div>
-              <div class="shrink-0 hidden md:block">
-                <svg
-                  class="w-16 h-16 text-light-gray-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
+          <p class="text-lg leading-relaxed max-w-2xl mx-auto">
+            Výsledkem je <strong>rychlá, relativně jednoduchá a bezpečná</strong
+            > rekonstrukce s velmi dlouhou životností a možností poskytnout <strong
+              >dlouhou (až cca 25letou) záruku</strong
+            > při použití geotextilie.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Balconies Section -->
-  <section class="py-20 bg-light-gray-50">
+  <section
+    class="py-20 bg-white"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div data-aos="fade-up">
         <div class="flex justify-center mb-8">
-          <svg
-            class="w-24 h-24 text-light-gray-900"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <div
+            class="icon-container-gradient w-28 h-28 rounded-2xl flex items-center justify-center shadow-lg"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-            ></path>
-          </svg>
+            <svg
+              class="w-16 h-16 text-brick-red-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <h2 class="h2 text-light-gray-900 mb-6 text-center">
+        <h2
+          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-brick"
+        >
           Renovace balkónů
         </h2>
 
         <!-- Problem with Traditional Tiles -->
         <div
-          class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200 mb-12"
+          class="bg-gradient-to-r from-red-50 to-red-100 p-8 rounded-2xl border border-red-200 mb-12 mt-12"
           data-aos="fade-up"
         >
-          <div class="flex gap-4 items-start">
+          <div class="flex gap-6 items-start">
             <div class="shrink-0">
-              <svg
-                class="w-12 h-12 text-red-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <div
+                class="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                ></path>
-              </svg>
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  ></path>
+                </svg>
+              </div>
             </div>
             <div class="flex-1">
-              <h3 class="h3 text-light-gray-900 mb-4">
-                Problém tradiční dlažby
-              </h3>
-              <p class="text-light-gray-700 text-lg">
+              <h3 class="h3 text-red-800 mb-4">Problém tradiční dlažby</h3>
+              <p class="text-red-700 text-lg leading-relaxed">
                 Keramická dlažba na balkonech často selhává kvůli spárám, kde
                 voda proniká, mrzne a degraduje podklad, což vede k odlepení
-                dlaždic a poškození konstrukce. PUR systém eliminuje švy,
-                spojuje odlišné materiály bez rizika prasklin a zajišťuje
+                dlaždic a poškození konstrukce. <strong
+                  >PUR systém eliminuje švy</strong
+                >, spojuje odlišné materiály bez rizika prasklin a zajišťuje
                 dlouhodobou vodotěsnost.
               </p>
             </div>
@@ -677,35 +699,43 @@ import MainLayout from "@/layouts/main.astro";
 
         <!-- Key Procedure -->
         <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="h3 text-light-gray-900 mb-8 text-center">
+          <h3
+            class="h3 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
+          >
             Klíčový postup
           </h3>
           <div
-            class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+            class="bg-gradient-to-br from-light-gray-50 to-white p-8 rounded-2xl shadow-lg border border-light-gray-200 mt-12"
           >
             <div class="flex gap-6 items-start">
-              <div class="shrink-0">
-                <svg
-                  class="w-16 h-16 text-light-gray-900"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <div class="shrink-0 hidden md:block">
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-dark-teal-500 to-dark-teal-600 rounded-2xl flex items-center justify-center shadow-lg"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                  ></path>
-                </svg>
+                  <svg
+                    class="w-10 h-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                    ></path>
+                  </svg>
+                </div>
               </div>
               <div class="flex-1">
                 <p class="text-light-gray-700 text-lg leading-relaxed">
-                  Důraz klade na pečlivou přípravu podkladu: čištění, oprava
-                  trhlin, penetrace weberprim EP 2K nebo weberpodklad PUR
-                  (nechat 2–12 hodin), pak 2 vrstvy weberdry PUR seal nanášené
-                  malířským válčkem (nalít, rozprostřít, vložit geotextilii
-                  weberdry fabric do první mokré vrstvy pro zpevnění).
+                  Důraz klade na <strong class="text-light-gray-900"
+                    >pečlivou přípravu podkladu</strong
+                  >: čištění, oprava trhlin, penetrace weberprim EP 2K nebo
+                  weberpodklad PUR (nechat 2–12 hodin), pak 2 vrstvy weberdry
+                  PUR seal nanášené malířským válčkem (nalít, rozprostřít,
+                  vložit geotextilii weberdry fabric do první mokré vrstvy pro
+                  zpevnění).
                 </p>
               </div>
             </div>
@@ -714,107 +744,70 @@ import MainLayout from "@/layouts/main.astro";
 
         <!-- Advantages -->
         <div data-aos="fade-up" data-aos-delay="200">
-          <h3 class="h3 text-light-gray-900 mb-8 text-center">
+          <h3
+            class="h3 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-brick"
+          >
             Výhody systému
           </h3>
           <div
-            class="bg-white p-8 rounded-lg shadow-sm border border-light-gray-200"
+            class="bg-gradient-to-br from-brick-red-50 to-white p-8 rounded-2xl shadow-lg border border-brick-red-100 mt-12"
           >
-            <div class="prose prose-lg max-w-none text-light-gray-700">
-              <p class="text-lg leading-relaxed mb-6">
-                Jednoduchá aplikace válečkem umožňuje rychlou renovaci bez
-                složitých detailů, systém je UV stabilní, mechanicky odolný a
-                vhodný pro pochozí plochy jako balkony, terasy či koupelny.
-                Nabízí vysokou životnost (až 25 let s geotextilií) a chrání
-                konstrukci před vlhkostí.
-              </p>
-            </div>
+            <p class="text-light-gray-700 text-lg leading-relaxed mb-8">
+              Jednoduchá aplikace válečkem umožňuje rychlou renovaci bez
+              složitých detailů, systém je UV stabilní, mechanicky odolný a
+              vhodný pro pochozí plochy jako balkony, terasy či koupelny.
+            </p>
             <div
               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8"
             >
-              <div class="text-center">
-                <div class="flex justify-center mb-3">
-                  <svg
-                    class="w-12 h-12 text-light-gray-900"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <h4 class="h4 text-light-gray-900 mb-2">Jednoduchá aplikace</h4>
-                <p class="text-light-gray-600 text-sm">
-                  Rychlá renovace válečkem
-                </p>
-              </div>
-
-              <div class="text-center">
-                <div class="flex justify-center mb-3">
-                  <svg
-                    class="w-12 h-12 text-light-gray-900"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    ></path>
-                  </svg>
-                </div>
-                <h4 class="h4 text-light-gray-900 mb-2">UV stabilní</h4>
-                <p class="text-light-gray-600 text-sm">Odolný vůči UV záření</p>
-              </div>
-
-              <div class="text-center">
-                <div class="flex justify-center mb-3">
-                  <svg
-                    class="w-12 h-12 text-light-gray-900"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    ></path>
-                  </svg>
-                </div>
-                <h4 class="h4 text-light-gray-900 mb-2">Mechanicky odolný</h4>
-                <p class="text-light-gray-600 text-sm">
-                  Vhodný pro pochozí plochy
-                </p>
-              </div>
-
-              <div class="text-center">
-                <div class="flex justify-center mb-3">
-                  <svg
-                    class="w-12 h-12 text-light-gray-900"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <h4 class="h4 text-light-gray-900 mb-2">Dlouhá životnost</h4>
-                <p class="text-light-gray-600 text-sm">
-                  Až 25 let s geotextilií
-                </p>
-              </div>
+              {
+                [
+                  {
+                    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+                    title: "Jednoduchá aplikace",
+                    desc: "Rychlá renovace válečkem",
+                  },
+                  {
+                    icon: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
+                    title: "UV stabilní",
+                    desc: "Odolný vůči UV záření",
+                  },
+                  {
+                    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+                    title: "Mechanicky odolný",
+                    desc: "Vhodný pro pochozí plochy",
+                  },
+                  {
+                    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                    title: "Dlouhá životnost",
+                    desc: "Až 25 let s geotextilií",
+                  },
+                ].map((item) => (
+                  <div class="text-center p-4 rounded-xl bg-white shadow-sm">
+                    <div class="flex justify-center mb-3">
+                      <div class="w-14 h-14 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center">
+                        <svg
+                          class="w-7 h-7 text-brick-red-500"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d={item.icon}
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <h4 class="font-bold text-light-gray-900 mb-1">
+                      {item.title}
+                    </h4>
+                    <p class="text-light-gray-600 text-sm">{item.desc}</p>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
@@ -823,64 +816,109 @@ import MainLayout from "@/layouts/main.astro";
   </section>
 
   <!-- Technical Specifications -->
-  <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section
+    class="py-20 bg-light-gray-900 relative overflow-hidden"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
+    <!-- Decorative gradients -->
+    <div
+      class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brick-red-500/10 to-transparent"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-dark-teal-500/10 to-transparent"
+    >
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div data-aos="fade-up">
         <div class="flex justify-center mb-8">
-          <svg
-            class="w-20 h-20 text-light-gray-900"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <div
+            class="w-24 h-24 bg-gradient-to-br from-brick-red-500 to-brick-red-600 rounded-2xl flex items-center justify-center shadow-lg"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-            ></path>
-          </svg>
+            <svg
+              class="w-12 h-12 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <h2 class="h2 text-light-gray-900 mb-12 text-center">
+        <h2
+          class="h2 text-white mb-16 text-center heading-paint-underline heading-paint-underline-brick"
+        >
           Technické parametry
         </h2>
 
         <div
-          class="bg-white rounded-lg shadow-sm border border-light-gray-200 p-8"
+          class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mt-12"
         >
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-semibold text-light-gray-900 mb-2">
-                Tloušťka vrstvy
-              </h4>
-              <p class="text-light-gray-600">1,5 - 3,0 mm</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-light-gray-900 mb-2">
-                Teplotní odolnost
-              </h4>
-              <p class="text-light-gray-600">-40°C až +80°C</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-light-gray-900 mb-2">Pružnost</h4>
-              <p class="text-light-gray-600">Až 400%</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-light-gray-900 mb-2">Životnost</h4>
-              <p class="text-light-gray-600">25+ let</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-light-gray-900 mb-2">
-                Odolnost vůči UV
-              </h4>
-              <p class="text-light-gray-600">Vysoká</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-light-gray-900 mb-2">
-                Certifikace
-              </h4>
-              <p class="text-light-gray-600">CE, EN 1504-2</p>
-            </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {
+              [
+                {
+                  label: "Tloušťka vrstvy",
+                  value: "1,5 - 3,0 mm",
+                  icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5z",
+                },
+                {
+                  label: "Teplotní odolnost",
+                  value: "-40°C až +80°C",
+                  icon: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
+                },
+                {
+                  label: "Pružnost",
+                  value: "Až 400%",
+                  icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
+                },
+                {
+                  label: "Životnost",
+                  value: "25+ let",
+                  icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                },
+                {
+                  label: "Odolnost vůči UV",
+                  value: "Vysoká",
+                  icon: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z",
+                },
+                {
+                  label: "Certifikace",
+                  value: "CE, EN 1504-2",
+                  icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+                },
+              ].map((param) => (
+                <div class="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+                  <div class="flex justify-center mb-4">
+                    <div class="w-12 h-12 bg-brick-red-500/20 rounded-lg flex items-center justify-center">
+                      <svg
+                        class="w-6 h-6 text-brick-red-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d={param.icon}
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="font-semibold text-light-gray-300 mb-2 text-sm uppercase tracking-wider">
+                    {param.label}
+                  </h4>
+                  <p class="text-2xl font-bold text-white">{param.value}</p>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -888,19 +926,32 @@ import MainLayout from "@/layouts/main.astro";
   </section>
 
   <!-- CTA Section -->
-  <section class="py-20 bg-light-gray-900 text-white">
+  <section
+    class="py-20 bg-gradient-to-r from-brick-red-500 to-brick-red-600 text-white relative overflow-hidden"
+  >
+    <!-- Decorative paint effect -->
+    <div class="absolute inset-0 opacity-10">
+      <Image
+        src={paintEffect}
+        alt=""
+        width={1920}
+        height={200}
+        class="w-full h-full object-cover"
+      />
+    </div>
+
     <div
-      class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       data-aos="fade-up"
     >
       <h2 class="h2 text-white mb-6">Máte dotazy k technologii?</h2>
-      <p class="text-xl text-light-gray-300 max-w-2xl mx-auto mb-8">
+      <p class="text-xl text-brick-red-100 max-w-2xl mx-auto mb-8">
         Rádi vám poskytneme podrobnější informace o našich hydroizolačních
         systémech a poradíme s výběrem nejvhodnějšího řešení pro váš projekt.
       </p>
       <a
         href="/kontakt"
-        class="btn bg-white text-light-gray-900 hover:bg-light-gray-100 inline-flex"
+        class="btn bg-white text-brick-red-600 hover:bg-light-gray-100 inline-flex shadow-lg hover:shadow-xl transition-all"
       >
         Kontaktovat nás
       </a>
