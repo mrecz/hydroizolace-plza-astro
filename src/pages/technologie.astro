@@ -2,6 +2,7 @@
 import MainLayout from "@/layouts/main.astro";
 import paintEffect from "@/assets/PaintRollerEffect.png";
 import { Image } from "astro:assets";
+import CTA from "@/components/CTA.astro";
 
 // Get the paint effect URL for CSS custom property
 const paintEffectUrl = paintEffect.src;
@@ -11,79 +12,18 @@ const paintEffectUrl = paintEffect.src;
   title="Technologie - Hydroizolace Plza"
   description="Tekuté polyuretanové hydroizolační systémy pro ploché střechy, balkóny a terasy. Moderní technologie s dlouhodobou zárukou."
 >
-  <!-- Page Header with Gradient Background -->
-  <section
-    class="relative py-20 md:py-32 overflow-hidden"
-    style={`--paint-effect-url: url('${paintEffectUrl}')`}
-  >
-    <!-- Background gradient -->
-    <div
-      class="absolute inset-0 bg-gradient-to-br from-light-gray-900 via-light-gray-800 to-light-gray-900"
-    >
-    </div>
-    <!-- Decorative elements -->
-    <div
-      class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brick-red-500/10 to-transparent"
-    >
-    </div>
-    <div
-      class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-dark-teal-500/10 to-transparent"
-    >
-    </div>
-
-    <div
-      class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-      data-aos="fade-up"
-    >
-      <span
-        class="inline-block px-4 py-2 bg-brick-red-500/20 text-brick-red-300 rounded-full text-sm font-medium mb-6"
-      >
-        Moderní hydroizolační systémy
-      </span>
-      <h1
-        class="h1 text-white mb-8 heading-paint-underline heading-paint-underline-brick"
-      >
-        Technologie
-      </h1>
-      <p class="text-xl text-light-gray-300 max-w-2xl mx-auto mt-12">
-        Používáme moderní tekuté polyuretanové hydroizolační systémy, které
-        poskytují dlouhodobou a spolehlivou ochranu vašich nemovitostí.
-      </p>
-    </div>
-  </section>
-
   <!-- What is Liquid Polyurethane -->
   <section
-    class="py-20 section-gradient-accent"
+    class="py-20 section-gradient-light-gray"
     style={`--paint-effect-url: url('${paintEffectUrl}')`}
   >
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div data-aos="fade-up">
-        <div class="flex justify-center mb-8">
-          <div
-            class="icon-container-gradient w-28 h-28 rounded-2xl flex items-center justify-center shadow-lg"
-          >
-            <svg
-              class="w-16 h-16 text-brick-red-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <h2
-          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
+        <h1
+          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-light-gray"
         >
           Co je tekutá polyuretanová hydroizolace?
-        </h2>
+        </h1>
         <div class="prose prose-lg max-w-none text-light-gray-700 mt-12">
           <p class="mb-6 text-lg leading-relaxed">
             Tekutá polyuretanová hydroizolace je <strong
@@ -112,27 +52,33 @@ const paintEffectUrl = paintEffect.src;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
         <h2
-          class="h2 text-light-gray-900 mb-4 heading-paint-underline heading-paint-underline-brick"
+          class="h2 text-light-gray-900 mb-4 heading-paint-underline heading-paint-underline-teal"
         >
           Výhody a benefity
         </h2>
-        <p class="text-lg text-light-gray-600 max-w-2xl mx-auto mt-10">
+        <p
+          class="text-lg
+          text-light-gray-600
+          max-w-2xl
+          mx-auto
+          mt-10"
+        >
           Proč je polyuretanová hydroizolace nejlepší volbou pro vaši nemovitost
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
-          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-teal"
           data-aos="fade-up"
           data-aos-delay="0"
         >
           <div class="flex justify-center mb-6">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
+              class="w-16 h-16 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center"
             >
               <svg
-                class="w-8 h-8 text-brick-red-500"
+                class="w-8 h-8 text-dark-teal-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -156,16 +102,16 @@ const paintEffectUrl = paintEffect.src;
         </div>
 
         <div
-          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-teal"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           <div class="flex justify-center mb-6">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
+              class="w-16 h-16 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center"
             >
               <svg
-                class="w-8 h-8 text-brick-red-500"
+                class="w-8 h-8 text-dark-teal-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -189,16 +135,16 @@ const paintEffectUrl = paintEffect.src;
         </div>
 
         <div
-          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-teal"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           <div class="flex justify-center mb-6">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
+              class="w-16 h-16 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center"
             >
               <svg
-                class="w-8 h-8 text-brick-red-500"
+                class="w-8 h-8 text-dark-teal-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -222,16 +168,16 @@ const paintEffectUrl = paintEffect.src;
         </div>
 
         <div
-          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-teal"
           data-aos="fade-up"
           data-aos-delay="300"
         >
           <div class="flex justify-center mb-6">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
+              class="w-16 h-16 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center"
             >
               <svg
-                class="w-8 h-8 text-brick-red-500"
+                class="w-8 h-8 text-dark-teal-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -254,16 +200,16 @@ const paintEffectUrl = paintEffect.src;
         </div>
 
         <div
-          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-teal"
           data-aos="fade-up"
           data-aos-delay="400"
         >
           <div class="flex justify-center mb-6">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
+              class="w-16 h-16 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center"
             >
               <svg
-                class="w-8 h-8 text-brick-red-500"
+                class="w-8 h-8 text-dark-teal-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -286,16 +232,16 @@ const paintEffectUrl = paintEffect.src;
         </div>
 
         <div
-          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-accent"
+          class="bg-white p-8 rounded-xl shadow-sm border border-light-gray-200 card-hover-lift feature-card-teal"
           data-aos="fade-up"
           data-aos-delay="500"
         >
           <div class="flex justify-center mb-6">
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center"
+              class="w-16 h-16 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center"
             >
               <svg
-                class="w-8 h-8 text-brick-red-500"
+                class="w-8 h-8 text-dark-teal-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -334,7 +280,7 @@ const paintEffectUrl = paintEffect.src;
     </div>
 
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" class="text-center">
         <h2
           class="h2 text-white mb-16 text-center heading-paint-underline heading-paint-underline-brick"
         >
@@ -500,26 +446,7 @@ const paintEffectUrl = paintEffect.src;
     style={`--paint-effect-url: url('${paintEffectUrl}')`}
   >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div data-aos="fade-up">
-        <div class="flex justify-center mb-8">
-          <div
-            class="icon-container-gradient w-28 h-28 rounded-2xl flex items-center justify-center shadow-lg"
-          >
-            <svg
-              class="w-16 h-16 text-dark-teal-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-              ></path>
-            </svg>
-          </div>
-        </div>
+      <div data-aos="fade-up" class="text-center">
         <h2
           class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
         >
@@ -541,12 +468,6 @@ const paintEffectUrl = paintEffect.src;
           class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12"
           data-aos="fade-up"
         >
-          <h3
-            class="h3 text-light-gray-900 mb-10 text-center heading-paint-underline heading-paint-underline-brick"
-          >
-            Postup krok za krokem
-          </h3>
-
           <div class="space-y-6 mt-12">
             {
               [
@@ -632,35 +553,16 @@ const paintEffectUrl = paintEffect.src;
     style={`--paint-effect-url: url('${paintEffectUrl}')`}
   >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div data-aos="fade-up">
-        <div class="flex justify-center mb-8">
-          <div
-            class="icon-container-gradient w-28 h-28 rounded-2xl flex items-center justify-center shadow-lg"
-          >
-            <svg
-              class="w-16 h-16 text-brick-red-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-              ></path>
-            </svg>
-          </div>
-        </div>
+      <div data-aos="fade-up" class="text-center">
         <h2
-          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-brick"
+          class="h2 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
         >
           Renovace balkónů
         </h2>
 
         <!-- Problem with Traditional Tiles -->
         <div
-          class="bg-gradient-to-r from-red-50 to-red-100 p-8 rounded-2xl border border-red-200 mb-12 mt-12"
+          class="bg-gradient-to-r from-light-gray-50 to-light-gray-100 p-8 rounded-2xl border border-red-200 mb-12 mt-12"
           data-aos="fade-up"
         >
           <div class="flex gap-6 items-start">
@@ -733,9 +635,8 @@ const paintEffectUrl = paintEffect.src;
                     >pečlivou přípravu podkladu</strong
                   >: čištění, oprava trhlin, penetrace weberprim EP 2K nebo
                   weberpodklad PUR (nechat 2–12 hodin), pak 2 vrstvy weberdry
-                  PUR seal nanášené malířským válčkem (nalít, rozprostřít,
-                  vložit geotextilii weberdry fabric do první mokré vrstvy pro
-                  zpevnění).
+                  PUR seal nanášené malířským válečkem (nalít, rozprostřít,
+                  vložit geotextilii do první mokré vrstvy pro zpevnění).
                 </p>
               </div>
             </div>
@@ -745,12 +646,12 @@ const paintEffectUrl = paintEffect.src;
         <!-- Advantages -->
         <div data-aos="fade-up" data-aos-delay="200">
           <h3
-            class="h3 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-brick"
+            class="h3 text-light-gray-900 mb-8 text-center heading-paint-underline heading-paint-underline-teal"
           >
             Výhody systému
           </h3>
           <div
-            class="bg-gradient-to-br from-brick-red-50 to-white p-8 rounded-2xl shadow-lg border border-brick-red-100 mt-12"
+            class="bg-gradient-to-br from-dark-teal-50 to-white p-8 rounded-2xl shadow-lg border border-dark-teal-100 mt-12"
           >
             <p class="text-light-gray-700 text-lg leading-relaxed mb-8">
               Jednoduchá aplikace válečkem umožňuje rychlou renovaci bez
@@ -785,9 +686,9 @@ const paintEffectUrl = paintEffect.src;
                 ].map((item) => (
                   <div class="text-center p-4 rounded-xl bg-white shadow-sm">
                     <div class="flex justify-center mb-3">
-                      <div class="w-14 h-14 bg-gradient-to-br from-brick-red-100 to-brick-red-50 rounded-xl flex items-center justify-center">
+                      <div class="w-14 h-14 bg-gradient-to-br from-dark-teal-100 to-dark-teal-50 rounded-xl flex items-center justify-center">
                         <svg
-                          class="w-7 h-7 text-brick-red-500"
+                          class="w-7 h-7 text-dark-teal-500"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -815,146 +716,11 @@ const paintEffectUrl = paintEffect.src;
     </div>
   </section>
 
-  <!-- Technical Specifications -->
-  <section
-    class="py-20 bg-light-gray-900 relative overflow-hidden"
-    style={`--paint-effect-url: url('${paintEffectUrl}')`}
-  >
-    <!-- Decorative gradients -->
-    <div
-      class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brick-red-500/10 to-transparent"
-    >
-    </div>
-    <div
-      class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-dark-teal-500/10 to-transparent"
-    >
-    </div>
-
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div data-aos="fade-up">
-        <div class="flex justify-center mb-8">
-          <div
-            class="w-24 h-24 bg-gradient-to-br from-brick-red-500 to-brick-red-600 rounded-2xl flex items-center justify-center shadow-lg"
-          >
-            <svg
-              class="w-12 h-12 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <h2
-          class="h2 text-white mb-16 text-center heading-paint-underline heading-paint-underline-brick"
-        >
-          Technické parametry
-        </h2>
-
-        <div
-          class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mt-12"
-        >
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {
-              [
-                {
-                  label: "Tloušťka vrstvy",
-                  value: "1,5 - 3,0 mm",
-                  icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5z",
-                },
-                {
-                  label: "Teplotní odolnost",
-                  value: "-40°C až +80°C",
-                  icon: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
-                },
-                {
-                  label: "Pružnost",
-                  value: "Až 400%",
-                  icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
-                },
-                {
-                  label: "Životnost",
-                  value: "25+ let",
-                  icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-                },
-                {
-                  label: "Odolnost vůči UV",
-                  value: "Vysoká",
-                  icon: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z",
-                },
-                {
-                  label: "Certifikace",
-                  value: "CE, EN 1504-2",
-                  icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-                },
-              ].map((param) => (
-                <div class="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-                  <div class="flex justify-center mb-4">
-                    <div class="w-12 h-12 bg-brick-red-500/20 rounded-lg flex items-center justify-center">
-                      <svg
-                        class="w-6 h-6 text-brick-red-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d={param.icon}
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <h4 class="font-semibold text-light-gray-300 mb-2 text-sm uppercase tracking-wider">
-                    {param.label}
-                  </h4>
-                  <p class="text-2xl font-bold text-white">{param.value}</p>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section
-    class="py-20 bg-gradient-to-r from-brick-red-500 to-brick-red-600 text-white relative overflow-hidden"
-  >
-    <!-- Decorative paint effect -->
-    <div class="absolute inset-0 opacity-10">
-      <Image
-        src={paintEffect}
-        alt=""
-        width={1920}
-        height={200}
-        class="w-full h-full object-cover"
-      />
-    </div>
-
-    <div
-      class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-      data-aos="fade-up"
-    >
-      <h2 class="h2 text-white mb-6">Máte dotazy k technologii?</h2>
-      <p class="text-xl text-brick-red-100 max-w-2xl mx-auto mb-8">
-        Rádi vám poskytneme podrobnější informace o našich hydroizolačních
-        systémech a poradíme s výběrem nejvhodnějšího řešení pro váš projekt.
-      </p>
-      <a
-        href="/kontakt"
-        class="btn bg-white text-brick-red-600 hover:bg-light-gray-100 inline-flex shadow-lg hover:shadow-xl transition-all"
-      >
-        Kontaktovat nás
-      </a>
-    </div>
-  </section>
+  <CTA
+    type="Máte dotazy k technologii?"
+    title="Rádi vám poskytneme podrobnější informace o našich hydroizolačních systémech."
+    description="Kontaktujte nás pro bezplatnou konzultaci a cenovou nabídku."
+    linkText="Kontaktovat nás"
+    linkHref="/kontakt"
+  />
 </MainLayout>

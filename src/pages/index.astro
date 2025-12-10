@@ -2,7 +2,10 @@
 import MainLayout from "@/layouts/main.astro";
 import MainHero from "@/components/MainHero.astro";
 import paintEffect from "@/assets/PaintRollerEffect.png";
-import { Image } from "astro:assets";
+import CTA from "@/components/CTA.astro";
+
+// Paint effect URL for heading underline
+const paintEffectUrl = paintEffect.src;
 ---
 
 <MainLayout
@@ -12,21 +15,21 @@ import { Image } from "astro:assets";
   <MainHero />
 
   <!-- Services Section -->
-  <section class="py-20 bg-light-gray-50">
+  <section
+    class="py-20 bg-light-gray-50"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="h2 text-light-gray-900 mb-4">Naše služby</h2>
+        <h2
+          class="h2 text-light-gray-900 mb-4 heading-paint-underline heading-paint-underline-light-gray"
+        >
+          Naše služby
+        </h2>
         <p class="text-lg text-light-gray-600 max-w-2xl mx-auto">
           Specializujeme se na profesionální hydroizolační řešení pro vaše
           nemovitosti
         </p>
-        <Image
-          src={paintEffect}
-          alt="Paint Roller Effect"
-          width={1366}
-          height={60}
-          class="mt-4 opacity-30"
-        />
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -127,12 +130,20 @@ import { Image } from "astro:assets";
   </section>
 
   <!-- Benefits Section -->
-  <section class="py-20 bg-white">
+  <section
+    class="py-20 bg-white"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="h2 text-light-gray-900 mb-4">Proč zvolit naše služby</h2>
+        <h2
+          class="h2 text-light-gray-900 mb-4 heading-paint-underline-long heading-paint-underline-teal"
+        >
+          Proč zvolit naše služby
+        </h2>
         <p class="text-lg text-light-gray-600 max-w-2xl mx-auto">
-          Kvalita, spolehlivost a dlouhodobá ochrana vašich investic
+          Kvalita, spolehlivost a dlouhodobá ochrana vašich investic (nemusí zde
+          být konkrétní čísla, třeba jen textově popsáno, proč právě Vy.)
         </p>
       </div>
 
@@ -157,23 +168,53 @@ import { Image } from "astro:assets";
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-20 bg-light-gray-900 text-white">
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-      data-aos="fade-up"
-    >
-      <h2 class="h2 text-white mb-6">Potřebujete hydroizolaci?</h2>
-      <p class="text-xl text-light-gray-300 max-w-2xl mx-auto mb-8">
-        Kontaktujte nás pro bezplatnou konzultaci a cenovou nabídku. Rádi vám
-        pomůžeme s vaším projektem.
-      </p>
-      <a
-        href="/kontakt"
-        class="btn bg-white text-light-gray-900 hover:bg-light-gray-100 inline-flex"
+  <!-- Operating Regions Section -->
+  <section
+    class="py-20 section-gradient-light-gray"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2
+          class="h2 text-light-gray-900 mb-6 heading-paint-underline heading-paint-underline-brick"
+        >
+          Kde působíme
+        </h2>
+        <p class="text-lg text-light-gray-700 max-w-2xl mx-auto">
+          Realizujeme zakázky v následujících oblastech:
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"
+        data-aos="fade-up"
       >
-        Kontaktovat nás
-      </a>
+        {
+          ["Pardubický kraj", "Královéhradecký kraj", "Praha"].map((region) => (
+            <div class="bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-light-gray-200 p-6 flex items-center justify-center text-center font-semibold text-light-gray-900 hover:shadow-md transition-shadow">
+              {region}
+            </div>
+          ))
+        }
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up">
+        {
+          ["Středočeský kraj", "Vysočina"].map((region) => (
+            <div class="bg-white/80 backdrop-blur rounded-2xl shadow-sm border border-light-gray-200 p-6 flex items-center justify-center text-center font-semibold text-light-gray-900 hover:shadow-md transition-shadow">
+              {region}
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
+  <CTA
+    type="Potřebujete hydroizolaci?"
+    title="Kontaktujte nás pro bezplatnou konzultaci a cenovou nabídku."
+    description="Rádi vám pomůžeme s vaším projektem."
+    linkText="Kontaktovat nás"
+    linkHref="/kontakt"
+    linkText2="Naše technologie"
+    linkHref2="/technologie"
+  />
 </MainLayout>

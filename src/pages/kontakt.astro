@@ -1,6 +1,10 @@
 ---
 import MainLayout from "@/layouts/main.astro";
 import ContactForm from "@/components/ContactForm.astro";
+import paintEffect from "@/assets/PaintRollerEffect.png";
+
+// Paint effect URL for heading underline
+const paintEffectUrl = paintEffect.src;
 ---
 
 <MainLayout
@@ -8,12 +12,19 @@ import ContactForm from "@/components/ContactForm.astro";
   description="Kontaktujte nás pro bezplatnou konzultaci a cenovou nabídku. Hydroizolace plochých střech, renovace balkónů a teras."
 >
   <!-- Page Header -->
-  <section class="bg-light-gray-50 py-16 md:py-24">
+  <section
+    class="bg-light-gray-50 py-16 md:py-24"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div
       class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       data-aos="fade-up"
     >
-      <h1 class="h1 text-light-gray-900 mb-6">Kontakt</h1>
+      <h1
+        class="h1 text-light-gray-900 mb-6 heading-paint-underline-long heading-paint-underline-light-gray"
+      >
+        Kontakt
+      </h1>
       <p class="text-xl text-light-gray-600 max-w-2xl mx-auto">
         Máte dotaz nebo zájem o naše služby? Neváhejte nás kontaktovat. Rádi vám
         poskytneme bezplatnou konzultaci a cenovou nabídku.
@@ -195,10 +206,17 @@ import ContactForm from "@/components/ContactForm.astro";
   </section>
 
   <!-- Map Section (placeholder) -->
-  <section class="py-20 bg-light-gray-50">
+  <section
+    class="py-20 bg-light-gray-50"
+    style={`--paint-effect-url: url('${paintEffectUrl}')`}
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-8" data-aos="fade-up">
-        <h2 class="h2 text-light-gray-900 mb-4">Kde nás najdete</h2>
+        <h2
+          class="h2 text-light-gray-900 mb-4 heading-paint-underline heading-paint-underline-light-gray"
+        >
+          Kde nás najdete
+        </h2>
       </div>
       <div
         class="bg-light-gray-200 rounded-lg h-96 flex items-center justify-center"

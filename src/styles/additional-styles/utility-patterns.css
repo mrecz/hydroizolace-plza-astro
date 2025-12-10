@@ -1,3 +1,314 @@
+/* ==========================================
+   Prose Styles (Custom Typography Plugin)
+   ========================================== */
+
+.prose {
+  @apply text-base text-light-gray-700;
+  max-width: 65ch;
+}
+
+.prose-lg {
+  @apply text-lg text-light-gray-700;
+  max-width: 65ch;
+}
+
+/* Prose Headings */
+.prose h1 {
+  @apply text-4xl font-bold text-light-gray-900 mt-0 mb-6 font-work-sans-variable;
+}
+
+.prose h2 {
+  @apply text-3xl font-bold text-light-gray-900 mt-12 mb-4 font-work-sans-variable;
+}
+
+.prose h3 {
+  @apply text-2xl font-semibold text-light-gray-900 mt-10 mb-3 font-work-sans-variable;
+}
+
+.prose h4 {
+  @apply text-xl font-semibold text-light-gray-900 mt-8 mb-2 font-work-sans-variable;
+}
+
+.prose h5 {
+  @apply text-lg font-semibold text-light-gray-900 mt-6 mb-2 font-work-sans-variable;
+}
+
+.prose h6 {
+  @apply text-base font-semibold text-light-gray-800 mt-6 mb-2 font-work-sans-variable;
+}
+
+/* First child heading removes top margin */
+.prose > :first-child {
+  margin-top: 0;
+}
+
+/* Last child removes bottom margin */
+.prose > :last-child {
+  margin-bottom: 0;
+}
+
+/* Prose Paragraphs */
+.prose p {
+  @apply my-5 leading-relaxed;
+}
+
+/* Prose Links */
+.prose a {
+  @apply text-dark-teal-600 font-medium underline decoration-dark-teal-300 underline-offset-2;
+  @apply transition-colors duration-200;
+}
+
+.prose a:hover {
+  @apply text-dark-teal-700 decoration-dark-teal-500;
+}
+
+/* Prose Strong & Emphasis */
+.prose strong {
+  @apply font-semibold text-light-gray-900;
+}
+
+.prose em {
+  @apply italic;
+}
+
+/* Prose Lists */
+.prose ul {
+  @apply my-5 pl-6 list-disc;
+}
+
+.prose ol {
+  @apply my-5 pl-6 list-decimal;
+}
+
+.prose li {
+  @apply my-2 pl-2;
+}
+
+.prose li::marker {
+  @apply text-light-gray-400;
+}
+
+.prose ol li::marker {
+  @apply text-light-gray-500 font-medium;
+}
+
+/* Nested lists */
+.prose ul ul,
+.prose ol ol,
+.prose ul ol,
+.prose ol ul {
+  @apply my-2;
+}
+
+/* Prose Blockquotes */
+.prose blockquote {
+  @apply my-6 pl-5 py-1 border-l-4 border-dark-teal-400 italic text-light-gray-600;
+  @apply bg-light-gray-50 rounded-r-lg pr-4;
+}
+
+.prose blockquote p {
+  @apply my-2;
+}
+
+/* Prose Code */
+.prose code {
+  @apply text-sm font-mono bg-light-gray-100 text-brick-red-600 px-1.5 py-0.5 rounded;
+}
+
+.prose code::before,
+.prose code::after {
+  content: none;
+}
+
+/* Prose Pre (Code Blocks) */
+.prose pre {
+  @apply my-6 p-4 bg-light-gray-900 text-light-gray-100 rounded-lg overflow-x-auto;
+  @apply text-sm leading-relaxed;
+}
+
+.prose pre code {
+  @apply bg-transparent text-inherit p-0 rounded-none;
+}
+
+/* Prose Horizontal Rule */
+.prose hr {
+  @apply my-10 border-0 border-t-2 border-light-gray-200;
+}
+
+/* Prose Images & Figures */
+.prose img {
+  @apply my-6 rounded-lg shadow-md;
+}
+
+.prose figure {
+  @apply my-8;
+}
+
+.prose figure img {
+  @apply my-0;
+}
+
+.prose figcaption {
+  @apply mt-3 text-sm text-light-gray-500 text-center italic;
+}
+
+/* Prose Tables */
+.prose table {
+  @apply my-6 w-full text-left border-collapse;
+}
+
+.prose thead {
+  @apply border-b-2 border-light-gray-300;
+}
+
+.prose th {
+  @apply py-3 px-4 font-semibold text-light-gray-900 text-sm uppercase tracking-wide;
+}
+
+.prose tbody tr {
+  @apply border-b border-light-gray-200;
+}
+
+.prose tbody tr:last-child {
+  @apply border-b-0;
+}
+
+.prose td {
+  @apply py-3 px-4;
+}
+
+/* Prose Video */
+.prose video {
+  @apply my-6 rounded-lg;
+}
+
+/* Prose Large Variant Adjustments */
+.prose-lg h1 {
+  @apply text-5xl mb-8;
+}
+
+.prose-lg h2 {
+  @apply text-4xl mt-14 mb-5;
+}
+
+.prose-lg h3 {
+  @apply text-3xl mt-12 mb-4;
+}
+
+.prose-lg h4 {
+  @apply text-2xl;
+}
+
+.prose-lg p {
+  @apply my-6;
+}
+
+.prose-lg ul,
+.prose-lg ol {
+  @apply my-6 pl-8;
+}
+
+.prose-lg li {
+  @apply my-3;
+}
+
+.prose-lg blockquote {
+  @apply my-8 pl-6 text-lg;
+}
+
+.prose-lg pre {
+  @apply my-8 p-5;
+}
+
+/* Prose Color Variants */
+.prose-dark {
+  @apply text-light-gray-300;
+}
+
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4,
+.prose-dark h5,
+.prose-dark h6 {
+  @apply text-white;
+}
+
+.prose-dark strong {
+  @apply text-white;
+}
+
+.prose-dark a {
+  @apply text-dark-teal-300 decoration-dark-teal-500;
+}
+
+.prose-dark a:hover {
+  @apply text-dark-teal-200 decoration-dark-teal-400;
+}
+
+.prose-dark blockquote {
+  @apply border-dark-teal-500 text-light-gray-400 bg-light-gray-800/50;
+}
+
+.prose-dark code {
+  @apply bg-light-gray-800 text-brick-red-400;
+}
+
+.prose-dark hr {
+  @apply border-light-gray-700;
+}
+
+.prose-dark li::marker {
+  @apply text-light-gray-500;
+}
+
+.prose-dark thead {
+  @apply border-light-gray-600;
+}
+
+.prose-dark th {
+  @apply text-light-gray-200;
+}
+
+.prose-dark tbody tr {
+  @apply border-light-gray-700;
+}
+
+/* Prose Teal Accent Variant */
+.prose-teal a {
+  @apply text-dark-teal-500 decoration-dark-teal-300;
+}
+
+.prose-teal a:hover {
+  @apply text-dark-teal-600 decoration-dark-teal-400;
+}
+
+.prose-teal blockquote {
+  @apply border-dark-teal-500;
+}
+
+/* Prose Brick Accent Variant */
+.prose-brick a {
+  @apply text-brick-red-600 decoration-brick-red-300;
+}
+
+.prose-brick a:hover {
+  @apply text-brick-red-700 decoration-brick-red-400;
+}
+
+.prose-brick blockquote {
+  @apply border-brick-red-400 bg-brick-red-50;
+}
+
+/* Remove max-width constraint */
+.prose-full {
+  max-width: none;
+}
+
+/* ==========================================
+   Heading Utility Classes
+   ========================================== */
+
 /* Typography */
 .h1 {
   @apply text-5xl font-bold;
@@ -50,6 +361,27 @@
   z-index: -1;
 }
 
+/* Paint Roller Heading Underline Effect */
+.heading-paint-underline-long {
+  @apply relative inline-block;
+}
+
+.heading-paint-underline-long::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 120%;
+  height: 25px;
+  background-image: var(--paint-effect-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: -1;
+}
+
 .heading-paint-underline-brick::after {
   filter: sepia(1) saturate(3) hue-rotate(-10deg) brightness(0.9);
   opacity: 0.8;
@@ -60,6 +392,11 @@
   opacity: 0.6;
 }
 
+.heading-paint-underline-light-gray::after {
+  filter: grayscale(1) brightness(1.05) contrast(0.9);
+  opacity: 0.55;
+}
+
 /* Section accent gradient */
 .section-gradient-accent {
   background: linear-gradient(
@@ -67,6 +404,24 @@
     var(--color-light-gray-50) 0%,
     var(--color-brick-red-50) 50%,
     var(--color-light-gray-50) 100%
+  );
+}
+
+.section-gradient-light-gray {
+  background: linear-gradient(
+    135deg,
+    var(--color-light-gray-50) 0%,
+    var(--color-light-gray-100) 45%,
+    var(--color-light-gray-200) 100%
+  );
+}
+
+.section-gradient-dark-gray {
+  background: linear-gradient(
+    135deg,
+    var(--color-light-gray-800) 0%,
+    var(--color-light-gray-900) 45%,
+    var(--color-light-gray-950) 100%
   );
 }
 
@@ -87,6 +442,25 @@
 .card-hover-lift:hover {
   @apply shadow-lg;
   transform: translateY(-4px);
+}
+
+/* Feature card with accent border */
+.feature-card-teal {
+  @apply relative overflow-hidden;
+}
+
+.feature-card-teal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-dark-teal-400),
+    var(--color-dark-teal-500)
+  );
 }
 
 /* Feature card with accent border */
