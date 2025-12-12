@@ -1,7 +1,7 @@
 ---
 import MainLayout from "@/layouts/main.astro";
-import ContactForm from "@/components/ContactForm.astro";
 import paintEffect from "@/assets/PaintRollerEffect.png";
+import ContactForm from "@/components/ContactForm.tsx";
 
 // Paint effect URL for heading underline
 const paintEffectUrl = paintEffect.src;
@@ -199,7 +199,7 @@ const paintEffectUrl = paintEffect.src;
           <h2 class="h2 text-light-gray-900 mb-8" data-aos="fade-up">
             Napište nám
           </h2>
-          <ContactForm />
+          <ContactForm client:load />
         </div>
       </div>
     </div>
