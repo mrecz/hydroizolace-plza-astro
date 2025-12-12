@@ -14,22 +14,40 @@ export default function ContactForm() {
 
     formData.append("access_key", "5022ffd2-19d4-4f63-9263-be4e49b1fedd");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
-    if (data.success) {
-      setResult("Děkujeme za vaši zprávu! Brzy se vám ozveme.");
-      form.reset();
-    } else {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      let data;
+      try {
+        data = await response.json();
+      } catch (jsonError) {
+        throw new Error("Invalid JSON response from server");
+      }
+
+      if (data.success) {
+        setResult("Děkujeme za vaši zprávu! Brzy se vám ozveme.");
+        form.reset();
+      } else {
+        setResult(
+          "Omlouváme se, došlo k chybě. Zkuste to prosím znovu. Nebo nám napište na email DavidPlza@seznam.cz"
+        );
+      }
+      setShowMessage(true);
+    } catch (error) {
       setResult(
         "Omlouváme se, došlo k chybě. Zkuste to prosím znovu. Nebo nám napište na email DavidPlza@seznam.cz"
       );
+      setShowMessage(true);
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
-    setShowMessage(true);
   };
 
   return (
