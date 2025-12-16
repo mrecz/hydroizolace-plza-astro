@@ -8,166 +8,305 @@ import CTA from "@/components/CTA.astro";
 // Paint effect URL for heading underline
 const paintEffectUrl = paintEffect.src;
 
-const galleryImages: GalleryImage[] = [
+// Realizace Praha - hydroizolace střechy
+const realizacePrahaImages: GalleryImage[] = [
   {
-    src: "/gallery/20250410_122442.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250410_122442.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250410_122448.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250410_122448.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250410_122451.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250410_122451.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250410_122454.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250410_122454.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250410_122500.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250410_122500.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250415_100833.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250415_100833.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250415_100836.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250415_100836.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250416_150004.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250416_150004.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250416_150007.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250416_150007.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250416_150010.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250416_150010.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250416_150013.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250416_150013.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250416_150034.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250416_150034.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250416_150038.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250416_150038.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250417_153529.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250417_153529.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250417_153543.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250417_153543.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250417_153558.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250417_153558.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250422_154408.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250422_154408.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250422_154416.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250422_154416.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250423_111740.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250423_111740.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250423_111745.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250423_111745.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250423_111748.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250423_111748.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250423_111756.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250423_111756.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103356.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103356.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103358.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103358.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103400.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103400.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103408.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103408.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103414.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103414.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103418.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103418.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103426.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103426.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103428.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103428.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250429_103435.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250429_103435.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
   },
   {
-    src: "/gallery/20250603_140848.jpg",
-    alt: "Realizace hydroizolace",
-    title: "Realizace hydroizolace",
+    src: "/gallery/realizace-praha/20250603_140848.jpg",
+    alt: "Realizace hydroizolace Praha",
+    title: "Realizace hydroizolace Praha",
+  },
+];
+
+// Diagnostika střešních defektů
+const diagnostikaImages: GalleryImage[] = [
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_071125.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_071147.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_072349.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_072514.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_072736.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_072831.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250624_072952.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250625_084758.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250625_084811.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250625_084823.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250625_084827.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250626_100019.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250626_100025.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250626_102516.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250627_122416.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250627_122508.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250627_122521.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+  {
+    src: "/gallery/diagnostika-stresnich-defektu/20250627_122523.jpg",
+    alt: "Diagnostika střešních defektů",
+    title: "Diagnostika střešních defektů",
+  },
+];
+
+// Realizace terasa Pardubice
+const terasaPardubiceImages: GalleryImage[] = [
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250722_155250.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250722_155252.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250723_173122.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250723_173128.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250725_102239.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250725_102242.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250725_102244.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
+  },
+  {
+    src: "/gallery/realizace-terasa-pardubice/20250728_103220.jpg",
+    alt: "Realizace terasy Pardubice",
+    title: "Realizace terasy Pardubice",
   },
 ];
 ---
@@ -212,7 +351,7 @@ const galleryImages: GalleryImage[] = [
     </div>
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery Section - Realizace Praha -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Gallery intro -->
@@ -221,17 +360,70 @@ const galleryImages: GalleryImage[] = [
           class="inline-flex items-center gap-2 text-sm font-medium text-light-gray-500 uppercase tracking-wider mb-4"
         >
           <span class="w-8 h-px bg-light-gray-400"></span>
-          Naše práce
+          Hydroizolace střechy
           <span class="w-8 h-px bg-light-gray-400"></span>
         </span>
 
+        <h2 class="h2 text-light-gray-900 mb-4">Realizace Praha</h2>
         <p class="text-light-gray-600">
-          Kliknutím na fotografii si ji zobrazíte ve větší velikosti
+          Kompletní hydroizolace ploché střechy v Praze
         </p>
       </div>
 
       <div data-aos="fade-up" data-aos-delay="100">
-        <Gallery client:load images={galleryImages} />
+        <Gallery client:load images={realizacePrahaImages} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section - Diagnostika střešních defektů -->
+  <section class="py-16 md:py-24 bg-light-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Gallery intro -->
+      <div data-aos="fade-up" class="mb-12 text-center">
+        <span
+          class="inline-flex items-center gap-2 text-sm font-medium text-light-gray-500 uppercase tracking-wider mb-4"
+        >
+          <span class="w-8 h-px bg-light-gray-400"></span>
+          Odborná diagnostika
+          <span class="w-8 h-px bg-light-gray-400"></span>
+        </span>
+
+        <h2 class="h2 text-light-gray-900 mb-4">
+          Diagnostika střešních defektů
+        </h2>
+        <p class="text-light-gray-600">
+          Profesionální diagnostika a identifikace problémů střešní krytiny
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Gallery client:load images={diagnostikaImages} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section - Realizace terasa Pardubice -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Gallery intro -->
+      <div data-aos="fade-up" class="mb-12 text-center">
+        <span
+          class="inline-flex items-center gap-2 text-sm font-medium text-light-gray-500 uppercase tracking-wider mb-4"
+        >
+          <span class="w-8 h-px bg-light-gray-400"></span>
+          Hydroizolace terasy
+          <span class="w-8 h-px bg-light-gray-400"></span>
+        </span>
+
+        <h2 class="h2 text-light-gray-900 mb-4">Realizace terasa Pardubice</h2>
+        <p class="text-light-gray-600">
+          Kompletní renovace a hydroizolace terasy v Pardubicích
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Gallery client:load images={terasaPardubiceImages} />
       </div>
     </div>
   </section>
