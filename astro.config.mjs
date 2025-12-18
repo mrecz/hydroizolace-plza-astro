@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://hydroizolace-plza.cz",
+  site: "https://hydroizolaceplza.cz",
   vite: {
     plugins: [tailwindcss()],
   },
