@@ -12,7 +12,7 @@ export default function ContactForm() {
     const form = event.currentTarget; // Store reference before await
     const formData = new FormData(form);
 
-    formData.append("access_key", "5022ffd2-19d4-4f63-9263-be4e49b1fedd");
+    formData.append("access_key", "1412662c-b0ea-4c8f-866c-37e6c88600e6");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -135,7 +135,13 @@ export default function ContactForm() {
       </div>
 
       {showMessage && (
-        <div className="mt-4 p-4 rounded-md bg-green-50 text-green-800 border border-green-200">
+        <div
+          className={`mt-4 p-4 rounded-md border ${
+            result.includes("Děkujeme")
+              ? "bg-green-50 text-green-800 border-green-200"
+              : "bg-red-50 text-red-800 border-red-200"
+          }`}
+        >
           {result}
         </div>
       )}
