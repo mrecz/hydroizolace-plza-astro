@@ -1,9 +1,12 @@
 import { useState, type FormEvent } from "react";
+import PrivacyPolicyModal from "./PrivacyPolicyModal";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [result, setResult] = useState("");
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [consentChecked, setConsentChecked] = useState(false);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,6 +37,7 @@ export default function ContactForm() {
       if (data.success) {
         setResult("Děkujeme za vaši zprávu! Brzy se vám ozveme.");
         form.reset();
+        setConsentChecked(false);
       } else {
         setResult(
           "Omlouváme se, došlo k chybě. Zkuste to prosím znovu. Nebo nám napište na email DavidPlza@seznam.cz"
@@ -124,15 +128,43 @@ export default function ContactForm() {
         ></textarea>
       </div>
 
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="consent"
+          name="consent"
+          required
+          checked={consentChecked}
+          onChange={(e) => setConsentChecked(e.target.checked)}
+          className="mt-1 h-4 w-4 rounded border-gray-300 text-light-gray-900 focus:ring-light-gray-900 cursor-pointer"
+        />
+        <label htmlFor="consent" className="text-sm text-light-gray-700">
+          Odesláním dotazu souhlasím se{" "}
+          <button
+            type="button"
+            onClick={() => setShowPrivacyModal(true)}
+            className="text-light-gray-900 underline hover:text-light-gray-700 font-medium cursor-pointer"
+          >
+            zpracováním osobních údajů
+          </button>
+          . <span className="text-red-500">*</span>
+        </label>
+      </div>
+
       <div>
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="btn bg-light-gray-900 text-white hover:bg-light-gray-800 w-full sm:w-auto disabled:opacity-50"
+          disabled={isSubmitting || !consentChecked}
+          className="btn bg-light-gray-900 text-white hover:bg-light-gray-800 w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? "Odesílám..." : "Odeslat zprávu"}
         </button>
       </div>
+
+      <PrivacyPolicyModal
+        isOpen={showPrivacyModal}
+        onClose={() => setShowPrivacyModal(false)}
+      />
 
       {showMessage && (
         <div
