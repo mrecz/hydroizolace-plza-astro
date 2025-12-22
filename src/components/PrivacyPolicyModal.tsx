@@ -47,7 +47,7 @@ export default function PrivacyPolicyModal({
         <div className="p-5 overflow-y-auto max-h-[60vh] text-sm text-light-gray-700 space-y-4">
           <p>
             David Plza, IČO 07706928, se sídlem Češkova 1358, 530 02 Pardubice
-            jako správce osobních údajů, Vás jako uživatele webových stránek
+            jako správce osobních údajů, Vás jako uživatele webových stránek{" "}
             <a
               href="https://hydroizolaceplza.cz"
               className="text-light-gray-900 underline hover:text-light-gray-700"
