@@ -87,10 +87,6 @@ export default function PrivacyPolicyModal({
               <li>telefonní číslo nebo</li>
               <li>e-mailová adresa.</li>
             </ul>
-            <p className="mt-2">
-              Na našich webových stránkách Vás nesledujeme, takže se k nám
-              dostanou jenom ty Vaše osobní údaje, které nám výslovně sdělíte.
-            </p>
           </div>
 
           <div>
@@ -137,7 +133,26 @@ export default function PrivacyPolicyModal({
 
           <div>
             <h4 className="font-semibold text-light-gray-900 mb-2">
-              7. Kontakt
+              7. Zásada použití souborů cookie
+            </h4>
+            <p>
+              Správce osobních údajů, jakožto provozovatel webové stráky
+              https://hydroizolaceplza.cz, užívá na této webové stránce soubory
+              cookies, které jsou zde užity za účelem:
+            </p>
+            <ul className="list-disc list-inside mt-2 ml-2 space-y-1">
+              <li>
+                měření návštěvnosti webových stránek a vytváření statistik
+                týkající se návštěvnosti a chování návštěvníků na webových
+                stránkách
+              </li>
+              <li>základní funkčnosti webových stránek</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-light-gray-900 mb-2">
+              8. Kontakt
             </h4>
             <p>
               V případě, že budete potřebovat kteroukoliv část textu vysvětlit,

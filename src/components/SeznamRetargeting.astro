@@ -1,0 +1,56 @@
+---
+// Seznam.cz Retargeting component
+// Fires retargeting hit only when user has given consent for marketing cookies
+---
+
+<script src="https://c.seznam.cz/js/rc.js"></script>
+<script>
+  import * as CookieConsent from "vanilla-cookieconsent";
+
+  // Type declarations for Seznam.cz globals
+  declare global {
+    interface Window {
+      sznIVA?: {
+        IS?: {
+          updateIdentities: (data: { eid: string | null }) => void;
+        };
+      };
+      rc?: {
+        retargetingHit: (config: { rtgId: number; consent: number }) => void;
+      };
+    }
+  }
+
+  function fireRetargetingHit() {
+    // Check if marketing cookies are accepted
+    const hasConsent = CookieConsent.acceptedCategory("marketing") ? 1 : 0;
+
+    // Update identities (no email since no login system)
+    if (window.sznIVA?.IS) {
+      window.sznIVA.IS.updateIdentities({
+        eid: null,
+      });
+    }
+
+    // Fire retargeting hit
+    if (window.rc?.retargetingHit) {
+      window.rc.retargetingHit({
+        rtgId: 1665989,
+        consent: hasConsent,
+      });
+    }
+  }
+
+  // Fire on initial page load (after cookie consent is initialized)
+  // Small delay to ensure CookieConsent is fully initialized
+  setTimeout(fireRetargetingHit, 100);
+
+  // Also fire when user updates their consent preferences
+  window.addEventListener("cc:onConsent", () => {
+    fireRetargetingHit();
+  });
+
+  window.addEventListener("cc:onChange", () => {
+    fireRetargetingHit();
+  });
+</script>

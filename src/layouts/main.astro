@@ -2,6 +2,8 @@
 import Animate from "@/components/animate.tsx";
 import Navigation from "@/components/Navigation.astro";
 import Footer from "@/components/Footer.astro";
+import CookieConsent from "@/components/CookieConsent.astro";
+import SeznamRetargeting from "@/components/SeznamRetargeting.astro";
 import "@/styles/style.css";
 import Seo from "@/components/lib/seo.astro";
 
@@ -48,5 +50,7 @@ const {
       <slot />
     </main>
     <Footer />
+    <CookieConsent />
+    <SeznamRetargeting />
   </body>
 </html>

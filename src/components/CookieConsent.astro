@@ -1,0 +1,163 @@
+---
+// Cookie Consent component using vanilla-cookieconsent v3
+// Documentation: https://cookieconsent.orestbida.com
+---
+
+<script>
+  import "vanilla-cookieconsent/dist/cookieconsent.css";
+  import * as CookieConsent from "vanilla-cookieconsent";
+
+  CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: "box wide",
+        position: "bottom center",
+        equalWeightButtons: true,
+        flipButtons: false,
+      },
+      preferencesModal: {
+        layout: "box",
+        position: "right",
+        equalWeightButtons: true,
+        flipButtons: false,
+      },
+    },
+
+    categories: {
+      necessary: {
+        enabled: true,
+        readOnly: true,
+      },
+      analytics: {
+        autoClear: {
+          cookies: [
+            {
+              name: /^_ga/, // regex to match all Google Analytics cookies
+            },
+            {
+              name: "_gid",
+            },
+          ],
+        },
+      },
+      marketing: {
+        autoClear: {
+          cookies: [
+            {
+              name: /^_fb/, // regex to match Facebook cookies
+            },
+          ],
+        },
+      },
+    },
+
+    language: {
+      default: "cs",
+      autoDetect: "document",
+      translations: {
+        cs: {
+          consentModal: {
+            title: "Používáme cookies",
+            description:
+              'Tyto webové stránky používají cookies pro zajištění správného fungování webu a pro analýzu návštěvnosti. Kliknutím na "Přijmout vše" souhlasíte s používáním všech cookies. Pro úpravu nastavení klikněte na "Nastavení".',
+            acceptAllBtn: "Přijmout vše",
+            acceptNecessaryBtn: "Pouze nezbytné",
+            showPreferencesBtn: "Nastavení",
+            footer:
+              '<a class="cc__link" href="/ochrana-osobnich-udaju">Ochrana osobních údajů</a>',
+          },
+          preferencesModal: {
+            title: "Nastavení cookies",
+            acceptAllBtn: "Přijmout vše",
+            acceptNecessaryBtn: "Pouze nezbytné",
+            savePreferencesBtn: "Uložit nastavení",
+            closeIconLabel: "Zavřít",
+            serviceCounterLabel: "Služby",
+            sections: [
+              {
+                title: "Používání cookies",
+                description:
+                  "Cookies jsou malé textové soubory, které webové stránky ukládají do vašeho zařízení. Pomáhají nám zajistit správné fungování webu, analyzovat návštěvnost a přizpůsobit obsah vašim potřebám.",
+              },
+              {
+                title:
+                  'Nezbytné cookies <span class="pm__badge">Vždy aktivní</span>',
+                description:
+                  "Tyto cookies jsou nezbytné pro správné fungování webových stránek. Bez nich by web nefungoval správně. Nelze je vypnout.",
+                linkedCategory: "necessary",
+              },
+              {
+                title: "Analytické cookies",
+                description:
+                  "Analytické cookies nám pomáhají pochopit, jak návštěvníci používají náš web. Díky nim můžeme zlepšovat jeho funkčnost a obsah.",
+                linkedCategory: "analytics",
+              },
+              {
+                title: "Marketingové cookies",
+                description:
+                  "Marketingové cookies se používají ke sledování návštěvníků napříč webovými stránkami za účelem zobrazování relevantních reklam.",
+                linkedCategory: "marketing",
+              },
+              {
+                title: "Další informace",
+                description:
+                  'Pro více informací o tom, jak používáme cookies a zpracováváme vaše osobní údaje, navštivte stránku <a class="cc__link" href="/ochrana-osobnich-udaju">Ochrana osobních údajů</a>. V případě dotazů nás můžete kontaktovat prostřednictvím <a class="cc__link" href="/kontakt">kontaktního formuláře</a>.',
+              },
+            ],
+          },
+        },
+        en: {
+          consentModal: {
+            title: "We use cookies",
+            description:
+              'This website uses cookies to ensure proper functionality and to analyze traffic. By clicking "Accept all", you agree to the use of all cookies. To customize your settings, click "Preferences".',
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            showPreferencesBtn: "Preferences",
+            footer:
+              '<a class="cc__link" href="/ochrana-osobnich-udaju">Privacy Policy</a>',
+          },
+          preferencesModal: {
+            title: "Cookie Preferences",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            savePreferencesBtn: "Save preferences",
+            closeIconLabel: "Close",
+            serviceCounterLabel: "Services",
+            sections: [
+              {
+                title: "Cookie Usage",
+                description:
+                  "Cookies are small text files that websites store on your device. They help us ensure proper website functionality, analyze traffic, and customize content to your needs.",
+              },
+              {
+                title:
+                  'Strictly Necessary Cookies <span class="pm__badge">Always active</span>',
+                description:
+                  "These cookies are essential for the proper functioning of the website. Without them, the website would not work correctly. They cannot be disabled.",
+                linkedCategory: "necessary",
+              },
+              {
+                title: "Analytics Cookies",
+                description:
+                  "Analytics cookies help us understand how visitors use our website. They allow us to improve its functionality and content.",
+                linkedCategory: "analytics",
+              },
+              {
+                title: "Marketing Cookies",
+                description:
+                  "Marketing cookies are used to track visitors across websites to display relevant advertisements.",
+                linkedCategory: "marketing",
+              },
+              {
+                title: "More Information",
+                description:
+                  'For more information about how we use cookies and process your personal data, please visit our <a class="cc__link" href="/ochrana-osobnich-udaju">Privacy Policy</a> page. If you have any questions, you can contact us via the <a class="cc__link" href="/kontakt">contact form</a>.',
+              },
+            ],
+          },
+        },
+      },
+    },
+  });
+</script>

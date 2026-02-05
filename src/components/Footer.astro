@@ -107,9 +107,21 @@ import logo from "@/assets/logo_final_text.png";
 
     <!-- Copyright -->
     <div class="mt-8 pt-8 border-t border-light-gray-200">
-      <p class="text-center text-sm text-light-gray-500">
-        © {currentYear} Hydroizolace Plza. Všechna práva vyhrazena.
-      </p>
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4"
+      >
+        <p class="text-sm text-light-gray-500">
+          © {currentYear} Hydroizolace Plza. Všechna práva vyhrazena.
+        </p>
+        <span class="hidden sm:inline text-light-gray-300">|</span>
+        <button
+          type="button"
+          data-cc="show-preferencesModal"
+          class="text-sm text-light-gray-500 hover:text-light-gray-900 transition-colors cursor-pointer"
+        >
+          Nastavení cookies
+        </button>
+      </div>
     </div>
   </div>
 </footer>
