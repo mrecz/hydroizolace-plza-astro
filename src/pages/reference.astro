@@ -8,6 +8,60 @@ import CTA from "@/components/CTA.astro";
 // Paint effect URL for heading underline
 const paintEffectUrl = paintEffect.src;
 
+// Nátěr plechové střechy Choltice
+const realizacePlechoveStrechyCholticeImages: GalleryImage[] = [
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260427_121102.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260427_121107.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260427_122436.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260428_101942.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260430_110708.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260501_094210.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260501_103803.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260501_103806.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260501_134848.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+  {
+    src: "/gallery/realizace-plechove-strechy-choltice/20260501_134852.jpg",
+    alt: "Nátěr plechové střechy v Cholticích",
+    title: "Nátěr Plechové Střechy v Cholticích",
+  },
+];
+
 // Realizace Praha - hydroizolace střechy
 const realizacePrahaImages: GalleryImage[] = [
   {
@@ -415,8 +469,35 @@ const gumoasfaltPardubiceImages: GalleryImage[] = [
     </div>
   </section>
 
-  <!-- Gallery Section - Realizace gumoasfalt Pardubice -->
+  <!-- Gallery Section - Nátěr plechové střechy Choltice -->
   <section class="py-16 md:py-24 bg-light-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Gallery intro -->
+      <div data-aos="fade-up" class="mb-12 text-center">
+        <span
+          class="inline-flex items-center gap-2 text-sm font-medium text-light-gray-500 uppercase tracking-wider mb-4"
+        >
+          <span class="w-8 h-px bg-light-gray-400"></span>
+          Nátěry plechových střech
+          <span class="w-8 h-px bg-light-gray-400"></span>
+        </span>
+
+        <h2 class="h2 text-light-gray-900 mb-4">
+          Nátěr Plechové Střechy v Cholticích
+        </h2>
+        <p class="text-light-gray-600">
+          Kompletní nátěr plechové střechy v Cholticích
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Gallery client:load images={realizacePlechoveStrechyCholticeImages} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section - Realizace gumoasfalt Pardubice -->
+  <section class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Gallery intro -->
       <div data-aos="fade-up" class="mb-12 text-center">
@@ -441,7 +522,7 @@ const gumoasfaltPardubiceImages: GalleryImage[] = [
   </section>
 
   <!-- Gallery Section - Realizace Praha -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-16 md:py-24 bg-light-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Gallery intro -->
       <div data-aos="fade-up" class="mb-12 text-center">
@@ -466,7 +547,7 @@ const gumoasfaltPardubiceImages: GalleryImage[] = [
   </section>
 
   <!-- Gallery Section - Diagnostika střešních defektů -->
-  <section class="py-16 md:py-24 bg-light-gray-50">
+  <section class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Gallery intro -->
       <div data-aos="fade-up" class="mb-12 text-center">
@@ -493,7 +574,7 @@ const gumoasfaltPardubiceImages: GalleryImage[] = [
   </section>
 
   <!-- Gallery Section - Realizace terasa Pardubice -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-16 md:py-24 bg-light-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Gallery intro -->
       <div data-aos="fade-up" class="mb-12 text-center">

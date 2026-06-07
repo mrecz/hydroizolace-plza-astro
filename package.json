@@ -11,9 +11,9 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.1",
-    "@astrojs/react": "^5.0.0",
-    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/mdx": "^6.0.2",
+    "@astrojs/react": "^5.0.7",
+    "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource-variable/work-sans": "^5.2.8",
     "@tailwindcss/vite": "^4.1.17",
@@ -21,7 +21,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "aos": "^2.3.4",
-    "astro": "^6.0.5",
+    "astro": "^6.4.4",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "react": "^19.2.0",
